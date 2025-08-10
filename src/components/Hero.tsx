@@ -74,11 +74,12 @@ const Hero = () => {
           <div className="relative animate-slide-up" style={{animationDelay: '0.3s'}}>
             <div className="relative">
               {/* Main Logo Card */}
-              <div className="relative p-8 modern-card rounded-3xl shadow-glow">
+              <div className="relative p-8 bg-transparent rounded-3xl">
                 <img 
                   src={kyriakisLogo} 
                   alt="Kyriakis Plumber Professional Logo"
-                  className="w-full h-auto max-w-xs lg:max-w-sm mx-auto object-contain aspect-square"
+                  className="w-full h-auto max-w-xs lg:max-w-sm mx-auto object-contain aspect-square drop-shadow-2xl"
+                  style={{filter: 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))'}}
                 />
                 
                 {/* Floating Badges */}
