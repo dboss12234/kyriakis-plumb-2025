@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { 
   Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame, Phone, 
@@ -129,6 +130,7 @@ const DetailedServices = () => {
 
   return (
     <div className="min-h-screen bg-gradient-surface">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/90"></div>
