@@ -21,7 +21,7 @@ const Services = () => {
     {
       icon: <Thermometer className="w-8 h-8 text-accent" />,
       title: "Underfloor Heating",
-      greekTitle: "Ενδοδαπέδια Θέρμανση",
+      greekTitle: "Ενδοδαπέδια",
       description: "Ενεργειακά αποδοτικά συστήματα θέρμανσης για άνετη και ομοιόμορφη κατανομή θερμοκρασίας.",
       features: ["Ενεργειακά Αποδοτικά", "Ομοιόμορφη Θέρμανση"],
       image: heatingImage,
