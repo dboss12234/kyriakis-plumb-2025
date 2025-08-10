@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <header className="glass sticky top-0 z-50 border-b border-border/50">
@@ -23,12 +23,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
-            <button 
-              onClick={() => setLanguage(language === "GR" ? "EN" : "GR")}
-              className="hover:bg-primary-light/20 px-2 py-1 rounded-lg transition-colors font-medium"
-            >
-              {language}
-            </button>
+            <span className="font-medium">GR</span>
           </div>
         </div>
       </div>
