@@ -28,17 +28,28 @@ const translations: Translations = {
   'header.tagline': { EN: 'Premium Services', GR: 'Premium Services' },
 
   // Hero Section
-  'hero.badge': { EN: 'Professional Plumbing Solutions', GR: 'Επαγγελματικές Υδραυλικές Λύσεις' },
-  'hero.title1': { EN: 'Professional', GR: 'Επαγγελματικές' },
-  'hero.title2': { EN: 'Plumbing Solutions', GR: 'Υδραυλικές Λύσεις' },
-  'hero.subtitle': { EN: 'Complete plumbing services with modern techniques and premium materials. From emergency repairs to complete installations, we deliver quality work with guaranteed results.', GR: 'Ολοκληρωμένες υδραυλικές υπηρεσίες με σύγχρονες τεχνικές και premium υλικά. Από επισκευές έκτακτης ανάγκης έως πλήρεις εγκαταστάσεις, παραδίδουμε ποιοτική εργασία με εγγυημένα αποτελέσματα.' },
+  'hero.badge': { EN: 'Professional Services', GR: 'Επαγγελματικές Υπηρεσίες' },
+  'hero.title1': { EN: 'Plumbing', GR: 'Υδραυλικές' },
+  'hero.title2': { EN: 'Services', GR: 'Υπηρεσίες' },
+  'hero.title3': { EN: 'in Greece', GR: 'στην Ελλάδα' },
+  'hero.emergency': { EN: '24/7 Emergency', GR: '24/7 Έκτακτη Ανάγκη' },
+  'hero.emergency.desc': { EN: 'Immediate response to critical situations', GR: 'Άμεση ανταπόκριση σε κρίσιμες καταστάσεις' },
+  'hero.subtitle': { EN: 'We offer comprehensive plumbing solutions with the latest technology. From installations to repairs, trust our experience for lasting results.', GR: 'Προσφέρουμε ολοκληρωμένες υδραυλικές λύσεις με την πιο σύγχρονη τεχνολογία. Από εγκαταστάσεις έως επισκευές, εμπιστευτείτε την εμπειρία μας για αποτελέσματα που διαρκούν.' },
   'hero.call': { EN: 'Call Now', GR: 'Κλήση Τώρα' },
-  'hero.estimate': { EN: 'Free Estimate', GR: 'Δωρεάν Εκτίμηση' },
+  'hero.estimate': { EN: 'Free Quote', GR: 'Δωρεάν Προσφορά' },
+  'hero.stat1': { EN: 'Satisfied Customers', GR: 'Ικανοποιημένοι Πελάτες' },
+  'hero.stat2': { EN: 'Years Experience', GR: 'Χρόνια Εμπειρίας' },
+  'hero.stat3': { EN: 'Availability', GR: 'Διαθεσιμότητα' },
+  'hero.certified': { EN: 'Certified', GR: 'Πιστοποιημένος' },
+  'hero.quality': { EN: 'Premium Quality', GR: 'Premium Ποιότητα' },
 
   // Services
   'services.badge': { EN: 'Our Services', GR: 'Οι Υπηρεσίες μας' },
   'services.title1': { EN: 'Professional', GR: 'Επαγγελματικές' },
   'services.title2': { EN: 'Plumbing Solutions', GR: 'Υδραυλικές Λύσεις' },
+  'services.cta.title1': { EN: 'Need Professional', GR: 'Χρειάζεστε Επαγγελματικές' },
+  'services.cta.title2': { EN: 'Plumbing Services?', GR: 'Υδραυλικές Υπηρεσίες;' },
+  'services.cta.desc': { EN: 'Contact us today for free consultation and quote', GR: 'Επικοινωνήστε μαζί μας σήμερα για δωρεάν συμβουλευτική και προσφορά' },
   'services.pipe.title': { EN: 'Pipe Installation', GR: 'Εγκατάσταση Νέων Σωληνώσεων' },
   'services.heating.title': { EN: 'Underfloor Heating', GR: 'Ενδοδαπέδια Θέρμανση' },
   'services.emergency.title': { EN: 'Emergency Repairs', GR: 'Επισκευές Έκτακτης Ανάγκης' },
@@ -52,6 +63,7 @@ const translations: Translations = {
   // Footer
   'footer.company': { EN: 'Kyriakis Plumber', GR: 'Kyriakis Plumber' },
   'footer.tagline': { EN: 'Premium Plumbing Services', GR: 'Premium Υδραυλικές Υπηρεσίες' },
+  'footer.description': { EN: 'Professional plumbing solutions with modern techniques and premium materials. We serve Greece with guaranteed quality work since 2014.', GR: 'Επαγγελματικές υδραυλικές λύσεις με σύγχρονες τεχνικές και premium υλικά. Εξυπηρετούμε την Ελλάδα με εγγυημένη ποιότητα εργασίας από το 2014.' },
   'footer.contact': { EN: 'Contact Information', GR: 'Στοιχεία Επικοινωνίας' },
   'footer.services.title': { EN: 'Our Services', GR: 'Οι Υπηρεσίες μας' },
   'footer.help': { EN: 'Need Help?', GR: 'Χρειάζεστε Βοήθεια;' },
@@ -65,7 +77,8 @@ const translations: Translations = {
   'email': { EN: 'Email', GR: 'Email' },
   'location': { EN: 'Location', GR: 'Τοποθεσία' },
   'greece': { EN: 'Greece', GR: 'Ελλάδα' },
-  'whatsapp': { EN: 'WhatsApp', GR: 'WhatsApp' }
+  'whatsapp': { EN: 'WhatsApp', GR: 'WhatsApp' },
+  'call.now': { EN: 'Call Now', GR: 'Κλήση Τώρα' }
 };
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {

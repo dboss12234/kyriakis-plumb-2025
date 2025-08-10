@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const services = [
     "Εγκατάσταση Σωληνώσεων",
     "Επισκευή Διαρροών", 
@@ -18,23 +20,22 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-bold mb-2">Kyriakis Plumber</h3>
-              <p className="text-accent font-semibold">Premium Υδραυλικές Υπηρεσίες</p>
+              <h3 className="text-xl font-bold mb-2">{t('footer.company')}</h3>
+              <p className="text-accent font-semibold">{t('footer.tagline')}</p>
             </div>
             <p className="text-background/80 leading-relaxed">
-              Επαγγελματικές υδραυλικές λύσεις με σύγχρονες τεχνικές και premium υλικά. 
-              Εξυπηρετούμε την Ελλάδα με εγγυημένη ποιότητα εργασίας από το 2014.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Στοιχεία Επικοινωνίας</h4>
+            <h4 className="text-lg font-semibold">{t('footer.contact')}</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
                 <div>
-                  <p className="font-medium">Τηλέφωνο</p>
+                  <p className="font-medium">{t('phone')}</p>
                   <p className="text-background/80">+30 698 581 4213</p>
                 </div>
               </div>
@@ -48,8 +49,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
                 <div>
-                  <p className="font-medium">Τοποθεσία</p>
-                  <p className="text-background/80">Ελλάδα</p>
+                  <p className="font-medium">{t('location')}</p>
+                  <p className="text-background/80">{t('greece')}</p>
                 </div>
               </div>
             </div>
@@ -57,7 +58,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Οι Υπηρεσίες μας</h4>
+            <h4 className="text-lg font-semibold">{t('footer.services.title')}</h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
@@ -71,18 +72,18 @@ const Footer = () => {
 
           {/* CTA */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Χρειάζεστε Βοήθεια;</h4>
+            <h4 className="text-lg font-semibold">{t('footer.help')}</h4>
             <p className="text-background/80">
-              Επικοινωνήστε μαζί μας για επαγγελματικές υδραυλικές υπηρεσίες
+              {t('footer.help.text')}
             </p>
             <div className="space-y-3">
               <Button variant="cta" className="w-full">
                 <Phone className="w-4 h-4" />
-                Κλήση Τώρα
+                {t('call.now')}
               </Button>
               <Button variant="outline" className="w-full bg-background/10 border-background/20 text-background hover:bg-background/20">
                 <MessageCircle className="w-4 h-4" />
-                WhatsApp
+                {t('whatsapp')}
               </Button>
             </div>
           </div>
@@ -91,14 +92,14 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2025 Kyriakis Plumber. Όλα τα δικαιώματα διατηρούνται.
+              {t('footer.rights')}
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-background/60 hover:text-accent transition-colors">
-                Πολιτική Απορρήτου
+                {t('footer.privacy')}
               </a>
               <a href="#" className="text-background/60 hover:text-accent transition-colors">
-                Όροι Χρήσης
+                {t('footer.terms')}
               </a>
             </div>
           </div>

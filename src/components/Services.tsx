@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import pipeImage from "/lovable-uploads/033c51f7-a99e-4c09-9028-ab128c60d220.png";
 import heatingImage from "/lovable-uploads/ced9d22a-1cf6-4449-8b22-6e79879a4766.png";
 import solarImage from "/lovable-uploads/a20dfd56-f3df-4935-b1a7-65125a25305f.png";
@@ -8,6 +9,7 @@ import waterHeatersImage from "/lovable-uploads/7ef06067-805e-433b-b533-d9984db8
 import boilerImage from "/lovable-uploads/37be9720-f499-40ff-8e49-e946d921d108.png";
 
 const Services = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: <Wrench className="w-8 h-8 text-primary" />,
@@ -77,18 +79,17 @@ const Services = () => {
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm font-medium text-primary mb-6">
             <Wrench className="w-4 h-4" />
-            Οι Υπηρεσίες μας
+            {t('services.badge')}
           </div>
           
           <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-            <span className="gradient-text">Επαγγελματικές</span>
+            <span className="gradient-text">{t('services.title1')}</span>
             <br />
-            <span className="text-foreground">Υδραυλικές Λύσεις</span>
+            <span className="text-foreground">{t('services.title2')}</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ολοκληρωμένες υδραυλικές υπηρεσίες με σύγχρονες τεχνικές και premium υλικά. 
-            Από επισκευές έκτακτης ανάγκης έως πλήρεις εγκαταστάσεις, παραδίδουμε ποιοτική εργασία με εγγυημένα αποτελέσματα.
+            {t('hero.subtitle')}
           </p>
         </div>
 

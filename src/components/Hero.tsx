@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Users, Star, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import kyriakisLogo from "@/assets/kyriakis-logo.png";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -17,15 +19,15 @@ const Hero = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-sm font-medium text-white">
                 <Zap className="w-4 h-4 text-accent" />
-                Επαγγελματικές Υπηρεσίες
+                {t('hero.badge')}
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-accent">Υδραυλικές</span>
+                <span className="text-accent">{t('hero.title1')}</span>
                 <br />
-                <span className="text-white">Υπηρεσίες</span>
+                <span className="text-white">{t('hero.title2')}</span>
                 <br />
-                <span className="text-white/80 text-3xl lg:text-4xl font-medium">στην Ελλάδα</span>
+                <span className="text-white/80 text-3xl lg:text-4xl font-medium">{t('hero.title3')}</span>
               </h1>
               
               <div className="flex items-center gap-3 p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl">
@@ -33,23 +35,22 @@ const Hero = () => {
                   <Phone className="w-6 h-6 text-emergency animate-pulse" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold text-white">24/7 Έκτακτη Ανάγκη</h2>
-                  <p className="text-white/80">Άμεση ανταπόκριση σε κρίσιμες καταστάσεις</p>
+                  <h2 className="text-xl font-semibold text-white">{t('hero.emergency')}</h2>
+                  <p className="text-white/80">{t('hero.emergency.desc')}</p>
                 </div>
               </div>
               
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
-                Προσφέρουμε ολοκληρωμένες υδραυλικές λύσεις με την πιο σύγχρονη τεχνολογία. 
-                Από εγκαταστάσεις έως επισκευές, εμπιστευτείτε την εμπειρία μας για αποτελέσματα που διαρκούν.
+                {t('hero.subtitle')}
               </p>
             </div>
 
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6">
               {[
-                { number: "500+", label: "Ικανοποιημένοι Πελάτες" },
-                { number: "10+", label: "Χρόνια Εμπειρίας" },
-                { number: "24/7", label: "Διαθεσιμότητα" }
+                { number: "500+", label: t('hero.stat1') },
+                { number: "10+", label: t('hero.stat2') },
+                { number: "24/7", label: t('hero.stat3') }
               ].map((stat, index) => (
                 <div key={index} className="text-center p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl animate-scale-in" 
                      style={{animationDelay: `${index * 0.2}s`}}>
@@ -63,10 +64,10 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="hero" size="lg" className="group bg-accent hover:bg-accent/90 text-white">
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                Κλήση Τώρα
+                {t('hero.call')}
               </Button>
               <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30">
-                Δωρεάν Προσφορά
+                {t('hero.estimate')}
               </Button>
             </div>
           </div>
@@ -87,7 +88,7 @@ const Hero = () => {
                 <div className="absolute -top-4 -right-4 p-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl animate-float">
                   <div className="flex items-center gap-2 text-success">
                     <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm font-semibold">Πιστοποιημένος</span>
+                    <span className="text-sm font-semibold">{t('hero.certified')}</span>
                   </div>
                 </div>
                 
@@ -95,7 +96,7 @@ const Hero = () => {
                      style={{animationDelay: '1s'}}>
                   <div className="flex items-center gap-2 text-accent">
                     <Star className="w-5 h-5" />
-                    <span className="text-sm font-semibold">Premium Ποιότητα</span>
+                    <span className="text-sm font-semibold">{t('hero.quality')}</span>
                   </div>
                 </div>
 
