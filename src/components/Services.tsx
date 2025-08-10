@@ -4,6 +4,9 @@ import { Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame } from "lucide
 import pipeImage from "@/assets/pipe-installation.jpg";
 import heatingImage from "@/assets/underfloor-heating.jpg";
 import solarImage from "@/assets/solar-system.jpg";
+import emergencyImage from "@/assets/emergency-repairs.jpg";
+import waterHeatersImage from "@/assets/water-heaters.jpg";
+import boilerImage from "@/assets/boiler-systems.jpg";
 
 const Services = () => {
   const services = [
@@ -31,7 +34,7 @@ const Services = () => {
       greekTitle: "Επισκευές Έκτακτης Ανάγκης",
       description: "24/7 υπηρεσίες έκτακτης ανάγκης με εγγυημένη ποιότητα και γρήγορους χρόνους ανταπόκρισης.",
       features: ["24/7 Διαθέσιμοι", "Γρήγορη Ανταπόκριση"],
-      image: pipeImage,
+      image: emergencyImage,
       cta: "Κλήση Τώρα",
       urgent: true
     },
@@ -50,7 +53,7 @@ const Services = () => {
       greekTitle: "Εγκατάσταση Θερμοσίφωνων",
       description: "Επαγγελματική εγκατάσταση και συντήρηση ηλεκτρικών και αεριακών συστημάτων θέρμανσης νερού.",
       features: ["Ηλεκτρικοί & Αεριακοί", "Πλήρης Συντήρηση"],
-      image: heatingImage,
+      image: waterHeatersImage,
       cta: "Προσφορά"
     },
     {
@@ -59,7 +62,7 @@ const Services = () => {
       greekTitle: "Εγκατάσταση Λεβήτων",
       description: "Πλήρη εγκατάσταση λεβητοστασίου και συντήρηση για οικιακές και εμπορικές ιδιοκτησίες.",
       features: ["Οικιακά & Εμπορικά", "Πλήρη Εγκατάσταση"],
-      image: pipeImage,
+      image: boilerImage,
       cta: "Προσφορά"
     }
   ];
