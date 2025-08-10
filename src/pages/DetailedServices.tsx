@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Footer from "@/components/Footer";
 import { 
   Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame, Phone, 
   CheckCircle, Star, Clock, Euro, Shield, Zap, ArrowRight, Home, Building2,
@@ -298,6 +299,8 @@ const DetailedServices = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
