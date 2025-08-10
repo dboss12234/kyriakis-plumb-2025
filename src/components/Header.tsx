@@ -49,6 +49,7 @@ const Header = () => {
             {[
               { name: "Αρχική", href: "/" },
               { name: "Υπηρεσίες", href: "/services" },
+              { name: "Λεπτομέρειες", href: "/detailed-services" },
               { name: "Σχετικά", href: "#about" },
               { name: "Επικοινωνία", href: "#contact" }
             ].map((item, index) => (
