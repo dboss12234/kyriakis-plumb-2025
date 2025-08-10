@@ -1,262 +1,465 @@
 <?php get_header(); ?>
 
-<main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
+<!-- Hero Section -->
+<section class="hero-section">
+    <!-- Animated Background Elements -->
+    <div class="hero-bg-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-grid">
+            <!-- Left Column - Content -->
             <div class="hero-content">
-                <h1><?php echo get_theme_mod('hero_title', 'Επαγγελματικές Υπηρεσίες Υδραυλικών'); ?></h1>
-                <p class="subtitle"><?php echo get_theme_mod('hero_subtitle', 'Αξιόπιστες λύσεις υδραυλικών για το σπίτι και την επιχείρησή σας'); ?></p>
+                <div class="hero-badge">
+                    <span class="hero-badge-icon">⚡</span>
+                    Επαγγελματικές Υπηρεσίες 24/7
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="text-accent">Κυριάκης</span><br>
+                    <span class="text-white">Υδραυλικές</span><br>
+                    <span class="text-subtitle">Υπηρεσίες</span>
+                </h1>
+                
+                <div class="emergency-card">
+                    <div class="emergency-icon">📞</div>
+                    <div class="emergency-text">
+                        <h2>Επείγουσες Κλήσεις</h2>
+                        <p>Διαθέσιμοι 24/7 για έκτακτα περιστατικά</p>
+                    </div>
+                </div>
+                
+                <p class="hero-subtitle">
+                    Πάνω από 10 χρόνια εμπειρίας στο χώρο των υδραυλικών. Εξειδικευμένοι στην εγκατάσταση, επισκευή και συντήρηση όλων των ειδών υδραυλικών συστημάτων.
+                </p>
+
+                <!-- Statistics -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Ικανοποιημένοι Πελάτες</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Χρόνια Εμπειρίας</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Διαθεσιμότητα</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
                 <div class="hero-buttons">
-                    <a href="tel:<?php echo get_theme_mod('phone_number', '+30 210 123 4567'); ?>" class="btn-primary">
-                        📞 Κλήση Τώρα
-                    </a>
-                    <a href="javascript:void(0)" onclick="openContactModal()" class="btn-secondary">
-                        📋 Δωρεάν Εκτίμηση
-                    </a>
+                    <a href="tel:+30 698 581 4213" class="btn-primary">📞 Κλήση Τώρα</a>
+                    <a href="#contact" class="btn-secondary">Δωρεάν Προσφορά</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title"><?php echo get_theme_mod('features_title', 'Γιατί να Μας Επιλέξετε'); ?></h2>
-            <p class="section-subtitle"><?php echo get_theme_mod('features_subtitle', 'Προσφέρουμε επαγγελματικές υπηρεσίες υδραυλικών με εμπειρία και αξιοπιστία'); ?></p>
-            
-            <div class="features-grid">
-                <?php
-                $features = get_theme_mod('features_list', array(
-                    array(
-                        'icon' => '⚡',
-                        'title' => 'Άμεση Εξυπηρέτηση',
-                        'description' => 'Διαθέσιμοι 24/7 για επείγουσες επισκευές και βλάβες υδραυλικών'
-                    ),
-                    array(
-                        'icon' => '🛠️',
-                        'title' => 'Επαγγελματική Εμπειρία',
-                        'description' => 'Πάνω από 15 χρόνια εμπειρίας στον τομέα των υδραυλικών'
-                    ),
-                    array(
-                        'icon' => '✅',
-                        'title' => 'Εγγυημένη Ποιότητα',
-                        'description' => 'Χρησιμοποιούμε μόνο υψηλής ποιότητας υλικά και εξοπλισμό'
-                    ),
-                    array(
-                        'icon' => '💰',
-                        'title' => 'Ανταγωνιστικές Τιμές',
-                        'description' => 'Διαφανείς τιμές χωρίς κρυφά κόστη'
-                    )
-                ));
-                
-                // If no custom features are set, use default array above
-                if (empty($features) || !is_array($features)) {
-                    $features = array(
-                        array(
-                            'icon' => '⚡',
-                            'title' => 'Άμεση Εξυπηρέτηση',
-                            'description' => 'Διαθέσιμοι 24/7 για επείγουσες επισκευές και βλάβες υδραυλικών'
-                        ),
-                        array(
-                            'icon' => '🛠️',
-                            'title' => 'Επαγγελματική Εμπειρία',
-                            'description' => 'Πάνω από 15 χρόνια εμπειρίας στον τομέα των υδραυλικών'
-                        ),
-                        array(
-                            'icon' => '✅',
-                            'title' => 'Εγγυημένη Ποιότητα',
-                            'description' => 'Χρησιμοποιούμε μόνο υψηλής ποιότητας υλικά και εξοπλισμό'
-                        ),
-                        array(
-                            'icon' => '💰',
-                            'title' => 'Ανταγωνιστικές Τιμές',
-                            'description' => 'Διαφανείς τιμές χωρίς κρυφά κόστη'
-                        )
-                    );
-                }
-                
-                foreach($features as $feature): ?>
-                <div class="feature-card">
-                    <div class="feature-icon"><?php echo $feature['icon']; ?></div>
-                    <h3><?php echo $feature['title']; ?></h3>
-                    <p><?php echo $feature['description']; ?></p>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section" id="services">
-        <div class="container">
-            <h2 class="section-title"><?php echo get_theme_mod('services_title', 'Οι Υπηρεσίες Μας'); ?></h2>
-            <p class="section-subtitle"><?php echo get_theme_mod('services_subtitle', 'Παρέχουμε ολοκληρωμένες λύσεις για όλες τις ανάγκες υδραυλικών'); ?></p>
-            
-            <div class="services-grid">
-                <?php
-                // Query custom services post type
-                $services_query = new WP_Query(array(
-                    'post_type' => 'services',
-                    'posts_per_page' => 6,
-                    'post_status' => 'publish'
-                ));
-                
-                if ($services_query->have_posts()) :
-                    while ($services_query->have_posts()) : $services_query->the_post();
-                        $price = get_post_meta(get_the_ID(), '_service_price', true);
-                        $duration = get_post_meta(get_the_ID(), '_service_duration', true);
-                        $warranty = get_post_meta(get_the_ID(), '_service_warranty', true);
-                ?>
-                <div class="service-card">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail('medium', array('class' => 'service-image')); ?>
-                    <?php endif; ?>
-                    <div class="service-content">
-                        <h3 class="service-title"><?php the_title(); ?></h3>
-                        <p class="service-description"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                        
-                        <?php if ($price || $duration || $warranty) : ?>
-                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                            <?php if ($price) : ?>
-                                <div style="margin-bottom: 0.5rem;"><strong>Τιμή:</strong> <?php echo $price; ?></div>
-                            <?php endif; ?>
-                            <?php if ($duration) : ?>
-                                <div style="margin-bottom: 0.5rem;"><strong>Διάρκεια:</strong> <?php echo $duration; ?></div>
-                            <?php endif; ?>
-                            <?php if ($warranty) : ?>
-                                <div><strong>Εγγύηση:</strong> <?php echo $warranty; ?></div>
-                            <?php endif; ?>
-                        </div>
-                        <?php endif; ?>
-                        
-                        <a href="<?php the_permalink(); ?>" style="display: inline-block; margin-top: 1rem; color: #3b82f6; text-decoration: none; font-weight: 600;">
-                            Μάθετε Περισσότερα →
-                        </a>
-                    </div>
-                </div>
-                <?php 
-                    endwhile;
-                    wp_reset_postdata();
-                else :
-                    // Fallback services if no custom services exist
-                    $default_services = array(
-                        array(
-                            'title' => 'Επισκευή Σωληνώσεων',
-                            'description' => 'Επισκευή και αντικατάσταση σωληνώσεων νερού και αποχέτευσης',
-                            'image' => get_template_directory_uri() . '/assets/pipe-installation.jpg'
-                        ),
-                        array(
-                            'title' => 'Θερμοσίφωνες',
-                            'description' => 'Εγκατάσταση, συντήρηση και επισκευή θερμοσιφώνων',
-                            'image' => get_template_directory_uri() . '/assets/water-heaters.jpg'
-                        ),
-                        array(
-                            'title' => 'Ενδοδαπέδια Θέρμανση',
-                            'description' => 'Εγκατάσταση συστημάτων ενδοδαπέδιας θέρμανσης',
-                            'image' => get_template_directory_uri() . '/assets/underfloor-heating.jpg'
-                        ),
-                        array(
-                            'title' => 'Επείγουσες Επισκευές',
-                            'description' => 'Υπηρεσίες έκτακτης ανάγκης 24/7 για επείγουσες βλάβες',
-                            'image' => get_template_directory_uri() . '/assets/emergency-repairs.jpg'
-                        ),
-                        array(
-                            'title' => 'Ηλιακά Συστήματα',
-                            'description' => 'Εγκατάσταση και συντήρηση ηλιακών συστημάτων',
-                            'image' => get_template_directory_uri() . '/assets/solar-system.jpg'
-                        ),
-                        array(
-                            'title' => 'Συστήματα Θέρμανσης',
-                            'description' => 'Εγκατάσταση και συντήρηση λεβήτων και καυστήρων',
-                            'image' => get_template_directory_uri() . '/assets/boiler-systems.jpg'
-                        )
-                    );
+            <!-- Right Column - Logo -->
+            <div class="hero-visual">
+                <div class="logo-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/kyriakis-logo.png" alt="Kyriakis Plumber Professional Logo" class="hero-logo">
                     
-                    foreach($default_services as $service): ?>
-                    <div class="service-card">
-                        <img src="<?php echo $service['image']; ?>" alt="<?php echo $service['title']; ?>" class="service-image">
-                        <div class="service-content">
-                            <h3 class="service-title"><?php echo $service['title']; ?></h3>
-                            <p class="service-description"><?php echo $service['description']; ?></p>
-                        </div>
+                    <!-- Floating Badges -->
+                    <div class="floating-badge badge-1">
+                        <span class="badge-icon">✓</span>
+                        <span class="badge-text">Πιστοποιημένος</span>
                     </div>
-                    <?php endforeach;
-                endif; ?>
+                    
+                    <div class="floating-badge badge-2">
+                        <span class="badge-icon">⭐</span>
+                        <span class="badge-text">Υψηλή Ποιότητα</span>
+                    </div>
+
+                    <div class="floating-badge badge-3">
+                        <span class="badge-icon">👥</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="container">
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <div class="services-background">
+        <div class="bg-circle service-bg-1"></div>
+        <div class="bg-circle service-bg-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span class="badge-icon">🔧</span>
+                Οι Υπηρεσίες Μας
+            </div>
+            
+            <h2 class="section-title">
+                <span class="gradient-text">Επαγγελματικές</span><br>
+                <span class="text-dark">Υδραυλικές Υπηρεσίες</span>
+            </h2>
+            
+            <p class="section-subtitle">
+                Πάνω από 10 χρόνια εμπειρίας στο χώρο των υδραυλικών. Εξειδικευμένοι στην εγκατάσταση, επισκευή και συντήρηση όλων των ειδών υδραυλικών συστημάτων.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/pipe-installation.jpg" alt="Pipe Installation" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🔧</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Pipe Installation</h4>
+                    <h3 class="service-title">Εγκατάσταση Νέων Σωληνώσεων</h3>
+                    <p class="service-description">Σύγχρονα συστήματα σωληνώσεων με premium υλικά και προηγμένες τεχνικές για μακροχρόνια αποτελέσματα.</p>
+                    <ul class="service-features">
+                        <li>Premium Υλικά</li>
+                        <li>Σύγχρονες Τεχνικές</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Προσφορά</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/underfloor-heating.jpg" alt="Underfloor Heating" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🌡️</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Underfloor Heating</h4>
+                    <h3 class="service-title">Ενδοδαπέδια Θέρμανση</h3>
+                    <p class="service-description">Ενεργειακά αποδοτικά συστήματα θέρμανσης για άνετη και ομοιόμορφη κατανομή θερμοκρασίας.</p>
+                    <ul class="service-features">
+                        <li>Ενεργειακά Αποδοτικά</li>
+                        <li>Ομοιόμορφη Θέρμανση</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Προσφορά</a>
+                </div>
+            </div>
+            
+            <div class="service-card emergency-service">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/emergency-repairs.jpg" alt="Emergency Repairs" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">⚠️</div>
+                    <div class="urgent-badge">ΕΠΕΙΓΟΝ</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Emergency Repairs</h4>
+                    <h3 class="service-title">Επισκευές Έκτακτης Ανάγκης</h3>
+                    <p class="service-description">24/7 υπηρεσίες έκτακτης ανάγκης με εγγυημένη ποιότητα και γρήγορους χρόνους ανταπόκρισης.</p>
+                    <ul class="service-features">
+                        <li>24/7 Διαθέσιμοι</li>
+                        <li>Γρήγορη Ανταπόκριση</li>
+                    </ul>
+                    <a href="tel:+30 698 581 4213" class="service-cta emergency-cta">Κλήση Τώρα</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/solar-system.jpg" alt="Solar Systems" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">☀️</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Solar Systems</h4>
+                    <h3 class="service-title">Ηλιακά Συστήματα Νερού</h3>
+                    <p class="service-description">Φιλικά προς το περιβάλλον ηλιακά συστήματα θέρμανσης νερού για βιώσιμο και οικονομικό ζεστό νερό.</p>
+                    <ul class="service-features">
+                        <li>Φιλικά προς το Περιβάλλον</li>
+                        <li>Οικονομικά</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Προσφορά</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/water-heaters.jpg" alt="Water Heaters" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">💧</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Water Heaters</h4>
+                    <h3 class="service-title">Εγκατάσταση Θερμοσίφωνων</h3>
+                    <p class="service-description">Επαγγελματική εγκατάσταση και συντήρηση ηλεκτρικών και αεριακών συστημάτων θέρμανσης νερού.</p>
+                    <ul class="service-features">
+                        <li>Ηλεκτρικοί & Αεριακοί</li>
+                        <li>Πλήρης Συντήρηση</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Προσφορά</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/boiler-systems.jpg" alt="Boiler Systems" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🔥</div>
+                </div>
+                <div class="service-content">
+                    <h4 class="service-category">Boiler Systems</h4>
+                    <h3 class="service-title">Εγκατάσταση Λεβήτων</h3>
+                    <p class="service-description">Πλήρη εγκατάσταση λεβητοστασίου και συντήρηση για οικιακές και εμπορικές ιδιοκτησίες.</p>
+                    <ul class="service-features">
+                        <li>Οικιακά & Εμπορικά</li>
+                        <li>Πλήρη Εγκατάσταση</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Προσφορά</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom CTA Section -->
+        <div class="services-cta">
+            <div class="cta-card">
+                <h3>
+                    <span class="gradient-text">Χρειάζεστε Επαγγελματικές</span><br>
+                    <span class="text-dark">Υδραυλικές Υπηρεσίες;</span>
+                </h3>
+                <p>Επικοινωνήστε μαζί μας σήμερα για δωρεάν συμβουλευτική και προσφορά</p>
+                <div class="cta-buttons">
+                    <a href="tel:+30 698 581 4213" class="btn-primary">📞 Κλήση Τώρα</a>
+                    <a href="#contact" class="btn-secondary">📱 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <!-- Left Column - Content -->
             <div class="about-content">
-                <div class="about-text">
-                    <h2><?php echo get_theme_mod('about_title', 'Σχετικά με Εμάς'); ?></h2>
-                    <p><?php echo get_theme_mod('about_description', 'Η εταιρεία μας δραστηριοποιείται στον τομέα των υδραυλικών εργασιών εδώ και πάνω από 15 χρόνια. Διαθέτουμε εμπειρία και τεχνογνωσία για να παρέχουμε υψηλής ποιότητας υπηρεσίες.'); ?></p>
-                    <p>Στόχος μας είναι να προσφέρουμε αξιόπιστες και οικονομικές λύσεις για όλες τις ανάγκες υδραυλικών, τόσο για ιδιώτες όσο και για επιχειρήσεις.</p>
-                    
-                    <!-- Testimonials -->
-                    <?php
-                    $testimonials = new WP_Query(array(
-                        'post_type' => 'testimonials',
-                        'posts_per_page' => 3,
-                        'post_status' => 'publish'
-                    ));
-                    
-                    if ($testimonials->have_posts()) : ?>
-                    <div style="margin-top: 2rem;">
-                        <h3>Τι λένε οι πελάτες μας:</h3>
-                        <?php while ($testimonials->have_posts()) : $testimonials->the_post(); ?>
-                        <blockquote style="border-left: 4px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic;">
-                            <p>"<?php echo get_the_content(); ?>"</p>
-                            <cite style="font-weight: 600; color: #3b82f6;">- <?php the_title(); ?></cite>
-                        </blockquote>
-                        <?php endwhile; wp_reset_postdata(); ?>
-                    </div>
-                    <?php endif; ?>
-                </div>
-                <div class="about-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-plumber.jpg" alt="Επαγγελματίας υδραυλικός">
-                </div>
-            </div>
-        </div>
-    </section>
+                <h2 class="about-title">Η Κυριάκης Υδραυλικές</h2>
+                <h3 class="about-subtitle">Πάνω από 10 χρόνια εμπειρίας στον τομέα</h3>
+                <p class="about-description">
+                    Πάνω από 10 χρόνια εμπειρίας στο χώρο των υδραυλικών. Εξειδικευμένοι στην εγκατάσταση, επισκευή και συντήρηση όλων των ειδών υδραυλικών συστημάτων.
+                </p>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2><?php echo get_theme_mod('contact_title', 'Επικοινωνήστε Μαζί Μας'); ?></h2>
-                <p><?php echo get_theme_mod('contact_subtitle', 'Είμαστε εδώ για να σας βοηθήσουμε με όλες τις ανάγκες υδραυλικών'); ?></p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞</span>
-                        <a href="tel:<?php echo get_theme_mod('phone_number', '+30 210 123 4567'); ?>" style="color: white; text-decoration: none;">
-                            <?php echo get_theme_mod('phone_number', '+30 210 123 4567'); ?>
-                        </a>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon certified">🛡️</div>
+                        <div class="feature-content">
+                            <h4>Πιστοποιημένος Υδραυλικός</h4>
+                            <p>Πλήρως αδειοδοτημένος και ασφαλισμένος για όλες τις υδραυλικές εργασίες</p>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:<?php echo get_theme_mod('email_address', 'info@kyriakis-plumbing.gr'); ?>" style="color: white; text-decoration: none;">
-                            <?php echo get_theme_mod('email_address', 'info@kyriakis-plumbing.gr'); ?>
-                        </a>
+                    
+                    <div class="about-feature">
+                        <div class="feature-icon emergency">🚨</div>
+                        <div class="feature-content">
+                            <h4>24/7 Υπηρεσίες Έκτακτης Ανάγκης</h4>
+                            <p>Διαθέσιμοι οποιαδήποτε στιγμή για επείγουσες υδραυλικές επισκευές</p>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span><?php echo get_theme_mod('business_address', 'Αθήνα, Ελλάδα'); ?></span>
+                    
+                    <div class="about-feature">
+                        <div class="feature-icon quality">🏆</div>
+                        <div class="feature-content">
+                            <h4>Εγγυημένη Ποιότητα</h4>
+                            <p>Χρησιμοποιούμε μόνο υψηλής ποιότητας υλικά και παρέχουμε εγγύηση για όλες τις εργασίες</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div style="margin-top: 2rem;">
-                    <a href="javascript:void(0)" onclick="openContactModal()" class="btn-primary">
-                        Στείλτε μας Μήνυμα
-                    </a>
+
+                <div class="about-cta">
+                    <h4>Χρειάζεστε Υδραυλικό;</h4>
+                    <p>Επικοινωνήστε μαζί μας για άμεση εξυπηρέτηση και δωρεάν προσφορά</p>
+                </div>
+            </div>
+
+            <!-- Right Column - Stats & Partners -->
+            <div class="about-sidebar">
+                <!-- Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">500</div>
+                        <div class="stat-label">Ικανοποιημένοι Πελάτες</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Χρόνια Εμπειρίας</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1000</div>
+                        <div class="stat-label">Ολοκληρωμένα Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Ώρες Διαθεσιμότητα</div>
+                    </div>
+                </div>
+
+                <!-- Partners -->
+                <div class="partners-card">
+                    <h4>Συνεργάτες Υλικών</h4>
+                    <div class="partners-grid">
+                        <div class="partner-item">Aquatherm</div>
+                        <div class="partner-item">Valsir</div>
+                        <div class="partner-item">Uponor</div>
+                        <div class="partner-item">Rehau</div>
+                    </div>
+                </div>
+
+                <!-- Quality badges -->
+                <div class="quality-badges">
+                    <div class="quality-badge certified">
+                        <span class="badge-icon">✓</span>
+                        <span class="badge-text">Πιστοποιημένος</span>
+                    </div>
+                    <div class="quality-badge premium">
+                        <span class="badge-icon">⭐</span>
+                        <span class="badge-text">Premium Ποιότητα</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="contact-background">
+        <div class="bg-circle contact-bg-1"></div>
+        <div class="bg-circle contact-bg-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span class="badge-icon">⚡</span>
+                Επικοινωνία
+            </div>
+            
+            <h2 class="section-title">
+                <span class="gradient-text">Επικοινωνήστε</span><br>
+                <span class="text-white">Μαζί Μας</span>
+            </h2>
+            
+            <p class="section-subtitle">
+                Είμαστε εδώ για να απαντήσουμε σε όλες τις ερωτήσεις σας και να παρέχουμε τις καλύτερες υδραυλικές υπηρεσίες
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Στοιχεία Επικοινωνίας</h3>
+                
+                <div class="contact-item phone">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Τηλέφωνο</h4>
+                        <p><a href="tel:+30 698 581 4213">+30 698 581 4213</a></p>
+                        <span>Διαθέσιμοι 24/7 για έκτακτα περιστατικά</span>
+                    </div>
+                </div>
+
+                <div class="contact-item email">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p><a href="mailto:kyriakisplumber@gmail.com">kyriakisplumber@gmail.com</a></p>
+                        <span>Απαντάμε εντός 24 ωρών</span>
+                    </div>
+                </div>
+
+                <div class="contact-item location">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Περιοχή Εξυπηρέτησης</h4>
+                        <p>Αθήνα και Περιχώρα</p>
+                        <span>Εξυπηρετούμε όλη την Αττική</span>
+                    </div>
+                </div>
+
+                <div class="contact-item whatsapp">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-details">
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/30698581421">+30 698 581 4213</a></p>
+                        <span>Γρήγορη επικοινωνία μέσω chat</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:+30 698 581 4213" class="btn-primary">📞 Κλήση Τώρα</a>
+                    <a href="https://wa.me/30698581421" class="btn-secondary">💬 WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="form-card">
+                    <h3>Στείλτε μας Μήνυμα</h3>
+                    <p>Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό</p>
+                    
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Όνομα</label>
+                                <input type="text" id="name" name="name" placeholder="Το όνομά σας" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Τηλέφωνο</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+30 xxx xxx xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Υπηρεσία</label>
+                                <select id="service" name="service">
+                                    <option value="">Επιλέξτε υπηρεσία</option>
+                                    <option value="emergency">Επείγουσα Επισκευή</option>
+                                    <option value="installation">Εγκατάσταση</option>
+                                    <option value="heating">Θέρμανση</option>
+                                    <option value="solar">Ηλιακά Συστήματα</option>
+                                    <option value="boiler">Λέβητες</option>
+                                    <option value="other">Άλλο</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Μήνυμα</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Περιγράψτε την ανάγκη σας εδώ..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            <span class="submit-icon">📤</span>
+                            Αποστολή Μηνύματος
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Section -->
+        <div class="emergency-section">
+            <div class="emergency-card">
+                <div class="emergency-icon">⚠️</div>
+                <h3>Επείγουσα Ανάγκη;</h3>
+                <p>Για επείγουσες υδραυλικές βλάβες, καλέστε τώρα!</p>
+                <a href="tel:+30 698 581 4213" class="emergency-button">📞 Κλήση Έκτακτης Ανάγκης</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
