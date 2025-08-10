@@ -1,26 +1,29 @@
 import { CheckCircle, Award, Clock, Shield } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8 text-success" />,
-      title: "Πιστοποιημένος Επαγγελματίας", 
-      description: "Premium Ποιότητα"
+      title: t('features.certified.title'),
+      description: t('features.certified.desc')
     },
     {
       icon: <Award className="w-8 h-8 text-accent" />,
-      title: "Υλικά υψηλής ποιότητας",
-      description: "Γρήγορη Ανταπόκριση"
+      title: t('features.materials.title'),
+      description: t('features.materials.desc')
     },
     {
       icon: <Clock className="w-8 h-8 text-primary" />,
-      title: "Εξυπηρέτηση την ίδια μέρα",
-      description: "Εγγυημένη Εργασία"
+      title: t('features.service.title'),
+      description: t('features.service.desc')
     },
     {
       icon: <Shield className="w-8 h-8 text-success" />,
-      title: "Πλήρης εγγύηση",
-      description: "Επαγγελματικές Υπηρεσίες"
+      title: t('features.warranty.title'),
+      description: t('features.warranty.desc')
     }
   ];
 
@@ -30,12 +33,12 @@ const Features = () => {
       <div className="relative container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            <span className="gradient-text">Γιατί να μας</span>
+            <span className="gradient-text">{t('features.section.title1')}</span>
             <br />
-            <span className="text-foreground">Εμπιστευτείτε</span>
+            <span className="text-foreground">{t('features.section.title2')}</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Professional Excellence in Every Detail
+            {t('features.section.subtitle')}
           </p>
         </div>
 

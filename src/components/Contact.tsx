@@ -7,8 +7,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send, Zap } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,8 +35,8 @@ const Contact = () => {
     
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Σφάλμα",
-        description: "Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία.",
+        title: t('contact.error.title'),
+        description: t('contact.error.required'),
         variant: "destructive",
       });
       return;
@@ -58,8 +60,8 @@ const Contact = () => {
       );
 
       toast({
-        title: "Επιτυχής Αποστολή!",
-        description: "Το μήνυμά σας εστάλη επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.",
+        title: t('contact.success.title'),
+        description: t('contact.success.message'),
       });
 
       setFormData({
@@ -73,8 +75,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
-        title: "Σφάλμα Αποστολής",
-        description: "Παρουσιάστηκε πρόβλημα κατά την αποστολή. Δοκιμάστε ξανά ή επικοινωνήστε τηλεφωνικά.",
+        title: t('contact.error.send.title'),
+        description: t('contact.error.send.message'),
         variant: "destructive",
       });
     } finally {
@@ -92,53 +94,52 @@ const Contact = () => {
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-6 py-3 glass rounded-full text-sm font-medium text-primary mb-8">
             <Zap className="w-5 h-5" />
-            Επικοινωνία
+            {t('contact.badge')}
           </div>
           
           <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-            <span className="gradient-text">Επικοινωνήστε</span>
+            <span className="gradient-text">{t('contact.title1')}</span>
             <br />
-            <span className="text-foreground">μαζί μας</span>
+            <span className="text-foreground">{t('contact.title2')}</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Έτοιμοι να λύσουμε τα υδραυλικά σας προβλήματα; Επικοινωνήστε μαζί μας για γρήγορη, 
-            αξιόπιστη εξυπηρέτηση. Διαθέσιμοι 24/7 για επείγοντα περιστατικά.
+            {t('contact.subtitle')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12 mb-20">
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
-            <h3 className="text-2xl font-bold text-foreground mb-8">Στοιχεία Επικοινωνίας</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-8">{t('contact.info')}</h3>
             
             {[
               {
                 icon: <Phone className="w-8 h-8 text-primary" />,
-                title: "Τηλέφωνο",
+                title: t('phone'),
                 value: "+30 698 581 4213",
-                subtitle: "Διαθέσιμοι 24/7 για επείγοντα",
+                subtitle: t('contact.phone.subtitle'),
                 color: "primary"
               },
               {
                 icon: <Mail className="w-8 h-8 text-accent" />,
-                title: "Email",
+                title: t('email'),
                 value: "kyriakisplumber@gmail.com",
-                subtitle: "Απάντηση εντός 24 ωρών",
+                subtitle: t('contact.email.subtitle'),
                 color: "accent"
               },
               {
                 icon: <MapPin className="w-8 h-8 text-success" />,
-                title: "Περιοχή Εξυπηρέτησης",
-                value: "Όλη η Ελλάδα",
-                subtitle: "Οικιακές & εμπορικές ιδιοκτησίες",
+                title: t('contact.location.title'),
+                value: t('contact.location.value'),
+                subtitle: t('contact.location.subtitle'),
                 color: "success"
               },
               {
                 icon: <MessageCircle className="w-8 h-8 text-warning" />,
-                title: "WhatsApp",
+                title: t('whatsapp'),
                 value: "+30 698 581 4213",
-                subtitle: "Γρήγορα μηνύματα & φωτογραφίες",
+                subtitle: t('contact.whatsapp.subtitle'),
                 color: "warning"
               }
             ].map((contact, index) => (
@@ -159,11 +160,11 @@ const Contact = () => {
             <div className="flex gap-4 pt-4">
               <Button variant="hero" className="flex-1 group">
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                Κλήση
+                {t('contact.call')}
               </Button>
               <Button variant="outline" className="flex-1 bg-background/50">
                 <MessageCircle className="w-5 h-5" />
-                WhatsApp
+                {t('whatsapp')}
               </Button>
             </div>
           </div>
@@ -172,19 +173,19 @@ const Contact = () => {
           <div className="lg:col-span-2 animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="modern-card p-10 rounded-3xl">
               <div className="space-y-6 mb-8">
-                <h3 className="text-3xl font-bold gradient-text">Στείλτε μας Μήνυμα</h3>
+                <h3 className="text-3xl font-bold gradient-text">{t('contact.form.title')}</h3>
                 <p className="text-muted-foreground text-lg">
-                  Συμπληρώστε την παρακάτω φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.
+                  {t('contact.form.subtitle')}
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <Label htmlFor="name" className="text-base font-semibold">Πλήρες Όνομα *</Label>
+                    <Label htmlFor="name" className="text-base font-semibold">{t('contact.form.name')}</Label>
                     <Input 
                       id="name" 
-                      placeholder="Το όνομά σας" 
+                      placeholder={t('contact.form.name.placeholder')}
                       value={formData.name}
                       onChange={handleInputChange}
                       className="h-12 rounded-xl border-2 focus:border-primary"
@@ -192,7 +193,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <Label htmlFor="email" className="text-base font-semibold">Διεύθυνση Email *</Label>
+                    <Label htmlFor="email" className="text-base font-semibold">{t('contact.form.email')}</Label>
                     <Input 
                       id="email" 
                       type="email" 
@@ -207,7 +208,7 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <Label htmlFor="phone" className="text-base font-semibold">Αριθμός Τηλεφώνου</Label>
+                    <Label htmlFor="phone" className="text-base font-semibold">{t('contact.form.phone')}</Label>
                     <Input 
                       id="phone" 
                       placeholder="+30 xxx xxx xxxx" 
@@ -217,28 +218,28 @@ const Contact = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <Label htmlFor="service" className="text-base font-semibold">Υπηρεσία</Label>
+                    <Label htmlFor="service" className="text-base font-semibold">{t('contact.form.service')}</Label>
                     <Select value={formData.service} onValueChange={handleServiceChange}>
                       <SelectTrigger className="h-12 rounded-xl border-2">
-                        <SelectValue placeholder="Επιλέξτε υπηρεσία" />
+                        <SelectValue placeholder={t('contact.form.service.placeholder')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="emergency">Έκτακτη Επισκευή</SelectItem>
-                        <SelectItem value="installation">Εγκατάσταση Σωληνώσεων</SelectItem>
-                        <SelectItem value="heating">Ενδοδαπέδια Θέρμανση</SelectItem>
-                        <SelectItem value="solar">Ηλιακά Συστήματα</SelectItem>
-                        <SelectItem value="boiler">Εγκατάσταση Λεβήτων</SelectItem>
-                        <SelectItem value="other">Άλλο</SelectItem>
+                        <SelectItem value="emergency">{t('contact.form.service.emergency')}</SelectItem>
+                        <SelectItem value="installation">{t('contact.form.service.installation')}</SelectItem>
+                        <SelectItem value="heating">{t('contact.form.service.heating')}</SelectItem>
+                        <SelectItem value="solar">{t('contact.form.service.solar')}</SelectItem>
+                        <SelectItem value="boiler">{t('contact.form.service.boiler')}</SelectItem>
+                        <SelectItem value="other">{t('contact.form.service.other')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                 </div>
 
                 <div className="space-y-3">
-                  <Label htmlFor="message" className="text-base font-semibold">Μήνυμα *</Label>
+                  <Label htmlFor="message" className="text-base font-semibold">{t('contact.form.message')}</Label>
                   <Textarea 
                     id="message" 
-                    placeholder="Περιγράψτε τις υδραυλικές σας ανάγκες..."
+                    placeholder={t('contact.form.message.placeholder')}
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
@@ -255,11 +256,11 @@ const Contact = () => {
                   disabled={isLoading}
                 >
                   {isLoading ? (
-                    "Αποστολή..."
+                    t('contact.form.sending')
                   ) : (
                     <>
                       <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      Αποστολή Μηνύματος
+                      {t('contact.form.submit')}
                     </>
                   )}
                 </Button>
@@ -280,16 +281,16 @@ const Contact = () => {
             </div>
             
             <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Επείγον Υδραυλικό Πρόβλημα;
+              {t('contact.emergency.title')}
             </h3>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Μην περιμένετε! Καλέστε μας αμέσως για 24/7 υπηρεσία έκτακτης ανάγκης.
+              {t('contact.emergency.subtitle')}
             </p>
             
             <Button variant="emergency" size="xl" className="group">
               <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-              Κλήση Γραμμής Έκτακτης Ανάγκης
+              {t('contact.emergency.button')}
             </Button>
           </div>
         </div>
