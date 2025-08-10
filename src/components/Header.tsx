@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Globe, Menu } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
-  const [language, setLanguage] = useState("GR");
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <header className="glass sticky top-0 z-50 border-b border-border/50">
@@ -41,18 +41,18 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-xl">K</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold gradient-text">Kyriakis Plumber</h1>
-              <p className="text-sm text-muted-foreground font-medium">Premium Services</p>
+              <h1 className="text-2xl font-bold gradient-text">{t('footer.company')}</h1>
+              <p className="text-sm text-muted-foreground font-medium">{t('header.tagline')}</p>
             </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
             {[
-              { name: "Αρχική", href: "/" },
-              { name: "Υπηρεσίες", href: "/services" },
-              { name: "Λεπτομέρειες", href: "/detailed-services" },
-              { name: "Σχετικά", href: "#about" },
-              { name: "Επικοινωνία", href: "#contact" }
+              { name: t('nav.home'), href: "/" },
+              { name: t('nav.services'), href: "/services" },
+              { name: t('nav.details'), href: "/detailed-services" },
+              { name: t('nav.about'), href: "#about" },
+              { name: t('nav.contact'), href: "#contact" }
             ].map((item, index) => (
               item.href.startsWith('#') ? (
                 <a key={index} href={item.href} className="text-foreground hover:text-primary transition-colors font-medium relative group">
@@ -70,7 +70,7 @@ const Header = () => {
 
           <Button variant="emergency" size="sm" className="shadow-md">
             <Phone className="w-4 h-4" />
-            24/7 Κλήση
+            {t('header.emergency')}
           </Button>
         </div>
       </nav>
