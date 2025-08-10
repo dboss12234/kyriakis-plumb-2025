@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame } from "lucide-react";
-import pipeImage from "@/assets/pipe-installation.jpg";
+import pipeImage from "/lovable-uploads/033c51f7-a99e-4c09-9028-ab128c60d220.png";
 import heatingImage from "@/assets/underfloor-heating.jpg";
 import solarImage from "@/assets/solar-system.jpg";
 import emergencyImage from "@/assets/emergency-repairs.jpg";
