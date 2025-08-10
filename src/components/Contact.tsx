@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
-import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send, Zap } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -45,8 +44,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_gdrd50p', // Service ID
-        'template_o8stalu', // Template ID
+        'service_gdrd50p',
+        'template_o8stalu',
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -55,7 +54,7 @@ const Contact = () => {
           message: formData.message,
           to_email: 'kyriakisplumber@gmail.com'
         },
-        '0hLkydwQF9f0KtYoT' // Public Key
+        '0hLkydwQF9f0KtYoT'
       );
 
       toast({
@@ -63,7 +62,6 @@ const Contact = () => {
         description: "Το μήνυμά σας εστάλη επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.",
       });
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -85,211 +83,215 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Επικοινωνία</h2>
-          <h3 className="text-2xl text-primary mb-6">
-            Επικοινωνήστε μαζί μας για Επαγγελματική Εξυπηρέτηση
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Έτοιμοι να λύσουμε τα υδραυλικά σας προβλήματα; Επικοινωνήστε μαζί μας σήμερα για γρήγορη, 
-            αξιόπιστη εξυπηρέτηση. Είμαστε διαθέσιμοι 24/7 για επείγοντα περιστατικά και προσφέρουμε 
-            δωρεάν συμβουλευτική για όλα τα έργα.
+    <section id="contact" className="py-32 relative">
+      <div className="absolute inset-0 bg-gradient-surface"></div>
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-accent rounded-full opacity-10 blur-3xl"></div>
+      
+      <div className="relative container mx-auto px-6">
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-6 py-3 glass rounded-full text-sm font-medium text-primary mb-8">
+            <Zap className="w-5 h-5" />
+            Επικοινωνία
+          </div>
+          
+          <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+            <span className="gradient-text">Επικοινωνήστε</span>
+            <br />
+            <span className="text-foreground">μαζί μας</span>
+          </h2>
+          
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Έτοιμοι να λύσουμε τα υδραυλικά σας προβλήματα; Επικοινωνήστε μαζί μας για γρήγορη, 
+            αξιόπιστη εξυπηρέτηση. Διαθέσιμοι 24/7 για επείγοντα περιστατικά.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-12 mb-20">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground mb-6">Στοιχεία Επικοινωνίας</h3>
+          <div className="space-y-8 animate-slide-up">
+            <h3 className="text-2xl font-bold text-foreground mb-8">Στοιχεία Επικοινωνίας</h3>
             
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Phone className="w-6 h-6 text-primary" />
+            {[
+              {
+                icon: <Phone className="w-8 h-8 text-primary" />,
+                title: "Τηλέφωνο",
+                value: "+30 698 581 4213",
+                subtitle: "Διαθέσιμοι 24/7 για επείγοντα",
+                color: "primary"
+              },
+              {
+                icon: <Mail className="w-8 h-8 text-accent" />,
+                title: "Email",
+                value: "kyriakisplumber@gmail.com",
+                subtitle: "Απάντηση εντός 24 ωρών",
+                color: "accent"
+              },
+              {
+                icon: <MapPin className="w-8 h-8 text-success" />,
+                title: "Περιοχή Εξυπηρέτησης",
+                value: "Όλη η Ελλάδα",
+                subtitle: "Οικιακές & εμπορικές ιδιοκτησίες",
+                color: "success"
+              },
+              {
+                icon: <MessageCircle className="w-8 h-8 text-warning" />,
+                title: "WhatsApp",
+                value: "+30 698 581 4213",
+                subtitle: "Γρήγορα μηνύματα & φωτογραφίες",
+                color: "warning"
+              }
+            ].map((contact, index) => (
+              <div key={index} className="modern-card p-6 rounded-3xl hover:shadow-lg transition-all duration-300 animate-scale-in" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="flex items-start gap-4">
+                  <div className={`p-4 bg-${contact.color}/10 rounded-2xl`}>
+                    {contact.icon}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Τηλέφωνο</h4>
-                    <p className="text-primary font-medium">+30 698 581 4213</p>
-                    <p className="text-sm text-muted-foreground">Διαθέσιμοι 24/7 για επείγοντα</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-primary font-medium">kyriakisplumber@gmail.com</p>
-                    <p className="text-sm text-muted-foreground">Θα απαντήσουμε εντός 24 ωρών</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <MapPin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Περιοχή Εξυπηρέτησης</h4>
-                    <p className="text-primary font-medium">Όλη η Ελλάδα</p>
-                    <p className="text-sm text-muted-foreground">Εξυπηρετούμε οικιακούς & εμπορικούς</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-accent/10 rounded-full p-3">
-                    <MessageCircle className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">WhatsApp</h4>
-                    <p className="text-accent font-medium">+30 698 581 4213</p>
-                    <p className="text-sm text-muted-foreground">Γρήγορα μηνύματα & φωτογραφίες</p>
+                  <div className="flex-1 space-y-1">
+                    <h4 className="font-bold text-lg text-foreground">{contact.title}</h4>
+                    <p className={`text-${contact.color} font-semibold text-lg`}>{contact.value}</p>
+                    <p className="text-sm text-muted-foreground">{contact.subtitle}</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            ))}
 
-            <div className="flex space-x-3">
-              <Button variant="cta" className="flex-1">
-                <Phone className="w-4 h-4" />
-                Κλήση Τώρα
+            <div className="flex gap-4 pt-4">
+              <Button variant="hero" className="flex-1 group">
+                <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                Κλήση
               </Button>
-              <Button variant="outline" className="flex-1">
-                <MessageCircle className="w-4 h-4" />
+              <Button variant="outline" className="flex-1 bg-background/50">
+                <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </Button>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">Στείλτε μας Μήνυμα</CardTitle>
-                <p className="text-muted-foreground">
+          <div className="lg:col-span-2 animate-slide-up" style={{animationDelay: '0.2s'}}>
+            <div className="modern-card p-10 rounded-3xl">
+              <div className="space-y-6 mb-8">
+                <h3 className="text-3xl font-bold gradient-text">Στείλτε μας Μήνυμα</h3>
+                <p className="text-muted-foreground text-lg">
                   Συμπληρώστε την παρακάτω φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.
                 </p>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <form onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Πλήρες Όνομα *</Label>
-                      <Input 
-                        id="name" 
-                        placeholder="Το όνομά σας" 
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Διεύθυνση Email *</Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="your@email.com" 
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                  </div>
+              </div>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Αριθμός Τηλεφώνου</Label>
-                      <Input 
-                        id="phone" 
-                        placeholder="+30 xxx xxx xxxx" 
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="service">Υπηρεσία που Χρειάζεστε</Label>
-                      <Select value={formData.service} onValueChange={handleServiceChange}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Επιλέξτε υπηρεσία" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="emergency">Έκτακτη Επισκευή</SelectItem>
-                          <SelectItem value="installation">Εγκατάσταση Σωληνώσεων</SelectItem>
-                          <SelectItem value="heating">Ενδοδαπέδια Θέρμανση</SelectItem>
-                          <SelectItem value="solar">Ηλιακά Συστήματα</SelectItem>
-                          <SelectItem value="boiler">Εγκατάσταση Λεβήτων</SelectItem>
-                          <SelectItem value="other">Άλλο</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2 mb-6">
-                    <Label htmlFor="message">Μήνυμα *</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Περιγράψτε τις υδραυλικές σας ανάγκες..."
-                      rows={4}
-                      value={formData.message}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <Label htmlFor="name" className="text-base font-semibold">Πλήρες Όνομα *</Label>
+                    <Input 
+                      id="name" 
+                      placeholder="Το όνομά σας" 
+                      value={formData.name}
                       onChange={handleInputChange}
+                      className="h-12 rounded-xl border-2 focus:border-primary"
                       required
                     />
                   </div>
+                  <div className="space-y-3">
+                    <Label htmlFor="email" className="text-base font-semibold">Διεύθυνση Email *</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="h-12 rounded-xl border-2 focus:border-primary"
+                      required
+                    />
+                  </div>
+                </div>
 
-                  <Button 
-                    type="submit" 
-                    variant="cta" 
-                    className="w-full" 
-                    size="lg"
-                    disabled={isLoading}
-                  >
-                    {isLoading ? (
-                      "Αποστολή..."
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Αποστολή Μηνύματος
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <Label htmlFor="phone" className="text-base font-semibold">Αριθμός Τηλεφώνου</Label>
+                    <Input 
+                      id="phone" 
+                      placeholder="+30 xxx xxx xxxx" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="h-12 rounded-xl border-2 focus:border-primary"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <Label htmlFor="service" className="text-base font-semibold">Υπηρεσία</Label>
+                    <Select value={formData.service} onValueChange={handleServiceChange}>
+                      <SelectTrigger className="h-12 rounded-xl border-2">
+                        <SelectValue placeholder="Επιλέξτε υπηρεσία" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="emergency">Έκτακτη Επισκευή</SelectItem>
+                        <SelectItem value="installation">Εγκατάσταση Σωληνώσεων</SelectItem>
+                        <SelectItem value="heating">Ενδοδαπέδια Θέρμανση</SelectItem>
+                        <SelectItem value="solar">Ηλιακά Συστήματα</SelectItem>
+                        <SelectItem value="boiler">Εγκατάσταση Λεβήτων</SelectItem>
+                        <SelectItem value="other">Άλλο</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <Label htmlFor="message" className="text-base font-semibold">Μήνυμα *</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Περιγράψτε τις υδραυλικές σας ανάγκες..."
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="rounded-xl border-2 focus:border-primary resize-none"
+                    required
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  className="w-full group" 
+                  size="xl"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    "Αποστολή..."
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      Αποστολή Μηνύματος
+                    </>
+                  )}
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
 
         {/* Emergency Section */}
-        <div className="bg-emergency/10 border border-emergency/20 rounded-2xl p-8 text-center">
-          <div className="flex justify-center mb-4">
-            <div className="bg-emergency/20 rounded-full p-4">
-              <AlertTriangle className="w-8 h-8 text-emergency" />
+        <div className="relative p-12 modern-card rounded-3xl text-center animate-fade-in border-2 border-emergency/20 bg-gradient-to-br from-emergency/5 to-emergency/10">
+          <div className="absolute inset-0 bg-emergency/5 rounded-3xl"></div>
+          
+          <div className="relative space-y-6">
+            <div className="flex justify-center">
+              <div className="p-6 bg-emergency/20 rounded-3xl animate-pulse-glow">
+                <AlertTriangle className="w-12 h-12 text-emergency" />
+              </div>
             </div>
+            
+            <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
+              Επείγον Υδραυλικό Πρόβλημα;
+            </h3>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Μην περιμένετε! Καλέστε μας αμέσως για 24/7 υπηρεσία έκτακτης ανάγκης.
+            </p>
+            
+            <Button variant="emergency" size="xl" className="group">
+              <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+              Κλήση Γραμμής Έκτακτης Ανάγκης
+            </Button>
           </div>
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Επείγον Υδραυλικό Πρόβλημα;
-          </h3>
-          <p className="text-lg text-muted-foreground mb-6">
-            Μην περιμένετε! Καλέστε μας αμέσως για 24/7 υπηρεσία έκτακτης ανάγκης.
-          </p>
-          <Button variant="emergency" size="lg" className="text-lg px-8">
-            <Phone className="w-5 h-5" />
-            Κλήση Γραμμής Έκτακτης Ανάγκης
-          </Button>
         </div>
       </div>
     </section>
