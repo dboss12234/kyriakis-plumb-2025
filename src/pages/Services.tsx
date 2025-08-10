@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame, Phone, 
   CheckCircle, Star, Clock, Euro, Shield, Zap, ArrowRight 
@@ -14,11 +15,12 @@ import waterHeatersImage from "/lovable-uploads/7ef06067-805e-433b-b533-d9984db8
 import boilerImage from "/lovable-uploads/37be9720-f499-40ff-8e49-e946d921d108.png";
 
 const ServicesPage = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: <Wrench className="w-10 h-10 text-primary" />,
-      title: "Pipe Installation",
-      greekTitle: "Εγκατάσταση Νέων Σωληνώσεων",
+      title: t('services.pipe.title'),
+      greekTitle: t('services.pipe.title'),
       description: "Σύγχρονα συστήματα σωληνώσεων με premium υλικά και προηγμένες τεχνικές για μακροχρόνια αποτελέσματα.",
       features: ["Premium Υλικά", "Σύγχρονες Τεχνικές", "10ετής Εγγύηση", "Πιστοποιημένα Προϊόντα"],
       image: pipeImage,
@@ -28,8 +30,8 @@ const ServicesPage = () => {
     },
     {
       icon: <Thermometer className="w-10 h-10 text-accent" />,
-      title: "Underfloor Heating",
-      greekTitle: "Ενδοδαπέδια Θέρμανση",
+      title: t('services.heating.title'),
+      greekTitle: t('services.heating.title'),
       description: "Ενεργειακά αποδοτικά συστήματα θέρμανσης για άνετη και ομοιόμορφη κατανομή θερμοκρασίας.",
       features: ["Ενεργειακά Αποδοτικά", "Ομοιόμορφη Θέρμανση", "Έλεγχος Θερμοκρασίας", "Οικονομία 30%"],
       image: heatingImage,
@@ -39,8 +41,8 @@ const ServicesPage = () => {
     },
     {
       icon: <AlertTriangle className="w-10 h-10 text-emergency" />,
-      title: "Emergency Repairs",
-      greekTitle: "Επισκευές Έκτακτης Ανάγκης",
+      title: t('services.emergency.title'),
+      greekTitle: t('services.emergency.title'),
       description: "24/7 υπηρεσίες έκτακτης ανάγκης με εγγυημένη ποιότητα και γρήγορους χρόνους ανταπόκρισης.",
       features: ["24/7 Διαθέσιμοι", "Γρήγορη Ανταπόκριση", "Έκτακτη Επισκευή", "Άμεση Λύση"],
       image: emergencyImage,
@@ -51,8 +53,8 @@ const ServicesPage = () => {
     },
     {
       icon: <Sun className="w-10 h-10 text-accent" />,
-      title: "Solar Systems",
-      greekTitle: "Ηλιακά Συστήματα Νερού",
+      title: t('services.solar.title'),
+      greekTitle: t('services.solar.title'),
       description: "Φιλικά προς το περιβάλλον ηλιακά συστήματα θέρμανσης νερού για βιώσιμο και οικονομικό ζεστό νερό.",
       features: ["Φιλικά προς το Περιβάλλον", "Οικονομικά", "Επιδότηση 40%", "Εξοικονόμηση Ενέργειας"],
       image: solarImage,
@@ -62,8 +64,8 @@ const ServicesPage = () => {
     },
     {
       icon: <Droplets className="w-10 h-10 text-primary" />,
-      title: "Water Heaters",
-      greekTitle: "Εγκατάσταση Θερμοσίφωνων",
+      title: t('services.water.title'),
+      greekTitle: t('services.water.title'),
       description: "Επαγγελματική εγκατάσταση και συντήρηση ηλεκτρικών και αεριακών συστημάτων θέρμανσης νερού.",
       features: ["Ηλεκτρικοί & Αεριακοί", "Πλήρης Συντήρηση", "Ενεργειακή Κλάση A+", "Έξυπνος Έλεγχος"],
       image: waterHeatersImage,
@@ -73,8 +75,8 @@ const ServicesPage = () => {
     },
     {
       icon: <Flame className="w-10 h-10 text-primary" />,
-      title: "Boiler Systems",
-      greekTitle: "Εγκατάσταση Λεβήτων",
+      title: t('services.boiler.title'),
+      greekTitle: t('services.boiler.title'),
       description: "Πλήρη εγκατάσταση λεβητοστασίου και συντήρηση για οικιακές και εμπορικές ιδιοκτησίες.",
       features: ["Οικιακά & Εμπορικά", "Πλήρη Εγκατάσταση", "Συστήματα Ελέγχου", "Υβριδικά Συστήματα"],
       image: boilerImage,
@@ -85,10 +87,10 @@ const ServicesPage = () => {
   ];
 
   const benefits = [
-    { icon: <CheckCircle className="w-6 h-6 text-success" />, text: "Δωρεάν Εκτίμηση & Συμβουλευτική" },
-    { icon: <Star className="w-6 h-6 text-accent" />, text: "Premium Υλικά & Εργασία" },
-    { icon: <Shield className="w-6 h-6 text-primary" />, text: "Εκτεταμένη Εγγύηση" },
-    { icon: <Clock className="w-6 h-6 text-warning" />, text: "Γρήγορη Ανταπόκριση" }
+    { icon: <CheckCircle className="w-6 h-6 text-success" />, text: t('services.page.benefits.consultation') },
+    { icon: <Star className="w-6 h-6 text-accent" />, text: t('services.page.benefits.materials') },
+    { icon: <Shield className="w-6 h-6 text-primary" />, text: t('services.page.benefits.warranty') },
+    { icon: <Clock className="w-6 h-6 text-warning" />, text: t('services.page.benefits.response') }
   ];
 
   return (
@@ -104,28 +106,28 @@ const ServicesPage = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-6 py-3 glass rounded-full text-sm font-medium text-primary">
               <Zap className="w-5 h-5" />
-              Ολοκληρωμένες Υδραυλικές Υπηρεσίες
+              {t('services.page.badge')}
             </div>
             
             <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-              <span className="gradient-text">Υδραυλικές</span>
+              <span className="gradient-text">{t('services.page.title1')}</span>
               <br />
-              <span className="text-primary-foreground">Υπηρεσίες</span>
+              <span className="text-primary-foreground">{t('services.page.title2')}</span>
               <br />
-              <span className="text-primary-foreground/80 text-4xl lg:text-5xl font-medium">για κάθε ανάγκη</span>
+              <span className="text-primary-foreground/80 text-4xl lg:text-5xl font-medium">{t('services.page.title3')}</span>
             </h1>
             
             <p className="text-2xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
-              Εξειδικευμένες λύσεις με σύγχρονη τεχνολογία και premium υλικά
+              {t('services.page.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
               <Button variant="hero" size="xl" className="group">
                 <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                Επικοινωνία Τώρα
+                {t('services.page.contact.now')}
               </Button>
               <Button variant="glass" size="xl">
-                Δωρεάν Εκτίμηση
+                {t('services.page.free.estimate')}
               </Button>
             </div>
           </div>
@@ -151,12 +153,12 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              <span className="gradient-text">Επαγγελματικές</span>
+              <span className="gradient-text">{t('services.page.section.title1')}</span>
               <br />
-              <span className="text-foreground">Υπηρεσίες</span>
+              <span className="text-foreground">{t('services.page.section.title2')}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ολοκληρωμένες λύσεις για κάθε υδραυλική ανάγκη
+              {t('services.page.section.subtitle')}
             </p>
           </div>
 
@@ -185,9 +187,9 @@ const ServicesPage = () => {
                   {/* Urgent Badge */}
                   {service.urgent && (
                     <div className="absolute top-6 right-6">
-                      <Badge variant="destructive" className="animate-pulse-glow">
-                        ΕΠΕΙΓΟΝ
-                      </Badge>
+                        <Badge variant="destructive" className="animate-pulse-glow">
+                          {t('services.urgent')}
+                        </Badge>
                     </div>
                   )}
 
@@ -218,14 +220,14 @@ const ServicesPage = () => {
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Clock className="w-4 h-4" />
-                        Διάρκεια
+                        {t('services.page.duration')}
                       </div>
                       <div className="font-semibold text-foreground">{service.duration}</div>
                     </div>
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Shield className="w-4 h-4" />
-                        Εγγύηση
+                        {t('services.page.warranty')}
                       </div>
                       <div className="font-semibold text-foreground">{service.warranty}</div>
                     </div>
@@ -233,7 +235,7 @@ const ServicesPage = () => {
                   
                   {/* Features */}
                   <div className="space-y-3">
-                    <h5 className="font-semibold text-foreground">Χαρακτηριστικά:</h5>
+                    <h5 className="font-semibold text-foreground">{t('services.page.features')}</h5>
                     <div className="grid grid-cols-2 gap-2">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
@@ -253,11 +255,11 @@ const ServicesPage = () => {
                       {service.urgent ? (
                         <>
                           <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                          Κλήση Τώρα
+                          {t('services.page.call.now')}
                         </>
                       ) : (
                         <>
-                          Προσφορά
+                          {t('services.page.quote')}
                         </>
                       )}
                     </Button>
@@ -280,13 +282,13 @@ const ServicesPage = () => {
             
             <div className="relative space-y-8">
               <h3 className="text-4xl lg:text-5xl font-bold">
-                <span className="gradient-text">Χρειάζεστε</span>
+                <span className="gradient-text">{t('services.page.cta.title1')}</span>
                 <br />
-                <span className="text-foreground">Επαγγελματική Βοήθεια;</span>
+                <span className="text-foreground">{t('services.page.cta.title2')}</span>
               </h3>
               
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Επικοινωνήστε μαζί μας για δωρεάν συμβουλευτική και προσφορά προσαρμοσμένη στις ανάγκες σας
+                {t('services.page.cta.subtitle')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -298,7 +300,7 @@ const ServicesPage = () => {
                   <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.087"/>
                   </svg>
-                  WhatsApp
+                  {t('whatsapp')}
                 </Button>
               </div>
             </div>

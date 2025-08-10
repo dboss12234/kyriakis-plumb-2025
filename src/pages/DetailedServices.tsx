@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame, Phone, 
   CheckCircle, Star, Clock, Euro, Shield, Zap, ArrowRight, Home, Building2,
@@ -9,123 +10,124 @@ import {
 } from "lucide-react";
 
 const DetailedServices = () => {
+  const { t } = useLanguage();
   const serviceCategories = [
     {
-      title: "Εγκατάσταση & Επισκευή Σωλήνων",
-      description: "Πλήρεις υπηρεσίες εγκατάστασης, επισκευής και αντικατάστασης σωλήνων για οικιστικά και εμπορικά ακίνητα.",
+      title: t('service.pipes.title'),
+      description: t('service.pipes.desc'),
       icon: <Wrench className="w-12 h-12 text-primary" />,
       color: "primary",
       services: [
-        "Εγκατάσταση σωλήνων νερού",
-        "Συστήματα αποχέτευσης", 
-        "Ανίχνευση διαρροών σωλήνων",
-        "Επισκευές έκτακτης ανάγκης"
+        t('service.pipes.1'),
+        t('service.pipes.2'),
+        t('service.pipes.3'),
+        t('service.pipes.4')
       ]
     },
     {
-      title: "Υδραυλικά Μπάνιου & Κουζίνας",
-      description: "Πλήρεις υδραυλικές λύσεις για μπάνια και κουζίνες, από εξαρτήματα έως πλήρεις ανακαινίσεις.",
+      title: t('service.bathroom.title'),
+      description: t('service.bathroom.desc'),
       icon: <Bath className="w-12 h-12 text-accent" />,
       color: "accent",
       services: [
-        "Εγκατάσταση εξαρτημάτων",
-        "Επισκευή νεροχύτη & βρύσης",
-        "Συστήματα ντους",
-        "Υδραυλικά κουζίνας"
+        t('service.bathroom.1'),
+        t('service.bathroom.2'),
+        t('service.bathroom.3'),
+        t('service.bathroom.4')
       ]
     },
     {
-      title: "Υπηρεσίες Θερμοσίφωνα",
-      description: "Εγκατάσταση, συντήρηση και επισκευή όλων των τύπων συστημάτων θέρμανσης νερού.",
+      title: t('service.water.heater.title'),
+      description: t('service.water.heater.desc'),
       icon: <Thermometer className="w-12 h-12 text-warning" />,
       color: "warning",
       services: [
-        "Εγκατάσταση λέβητα",
-        "Επισκευή θερμοσίφωνα",
-        "Συντήρηση συστήματος",
-        "Αναβαθμίσεις ενεργειακής απόδοσης"
+        t('service.water.heater.1'),
+        t('service.water.heater.2'),
+        t('service.water.heater.3'),
+        t('service.water.heater.4')
       ]
     },
     {
-      title: "Εγκατάσταση Λεβητοστασίου",
-      description: "Πλήρης εγκατάσταση και σχεδιασμός λεβητοστασίων για οικιστικά και εμπορικά κτίρια.",
+      title: t('service.boiler.install.title'),
+      description: t('service.boiler.install.desc'),
       icon: <Flame className="w-12 h-12 text-primary" />,
       color: "primary",
       services: [
-        "Σχεδιασμός λεβητοστασίου",
-        "Εγκατάσταση λέβητα",
-        "Σύνδεση δικτύου θέρμανσης",
-        "Δοκιμές και παραλαβή"
+        t('service.boiler.install.1'),
+        t('service.boiler.install.2'),
+        t('service.boiler.install.3'),
+        t('service.boiler.install.4')
       ]
     },
     {
-      title: "Service Λεβητοστασίου",
-      description: "Επαγγελματική συντήρηση και επισκευή λεβητοστασίων για βέλτιστη απόδοση.",
+      title: t('service.boiler.service.title'),
+      description: t('service.boiler.service.desc'),
       icon: <Settings className="w-12 h-12 text-success" />,
       color: "success",
       services: [
-        "Ετήσια συντήρηση λέβητα",
-        "Καθαρισμός καυστήρα",
-        "Έλεγχος ασφαλείας",
-        "Επισκευές βλαβών"
+        t('service.boiler.service.1'),
+        t('service.boiler.service.2'),
+        t('service.boiler.service.3'),
+        t('service.boiler.service.4')
       ]
     },
     {
-      title: "Ηλιακά Συστήματα",
-      description: "Εγκατάσταση και συντήρηση ηλιακών συστημάτων για οικονομική θέρμανση νερού.",
+      title: t('service.solar.title'),
+      description: t('service.solar.desc'),
       icon: <Sun className="w-12 h-12 text-accent" />,
       color: "accent",
       services: [
-        "Εγκατάσταση ηλιακών συλλεκτών",
-        "Σύνδεση με υπάρχον σύστημα",
-        "Συντήρηση ηλιακών",
-        "Αναβαθμίσεις συστημάτων"
+        t('service.solar.1'),
+        t('service.solar.2'),
+        t('service.solar.3'),
+        t('service.solar.4')
       ]
     },
     {
-      title: "Οικιακά Υδραυλικά",
-      description: "Πλήρεις υδραυλικές υπηρεσίες για σπίτια, διαμερίσματα και οικιστικά συγκροτήματα.",
+      title: t('service.residential.title'),
+      description: t('service.residential.desc'),
       icon: <Home className="w-12 h-12 text-primary" />,
       color: "primary",
       services: [
-        "Επιθεωρήσεις σπιτιού",
-        "Προληπτική συντήρηση",
-        "Αναβαθμίσεις εξαρτημάτων",
-        "Ανίχνευση διαρροών"
+        t('service.residential.1'),
+        t('service.residential.2'),
+        t('service.residential.3'),
+        t('service.residential.4')
       ]
     },
     {
-      title: "Εμπορικά Υδραυλικά",
-      description: "Επαγγελματικές υδραυλικές υπηρεσίες για επιχειρήσεις, γραφεία και εμπορικές εγκαταστάσεις.",
+      title: t('service.commercial.title'),
+      description: t('service.commercial.desc'),
       icon: <Building2 className="w-12 h-12 text-warning" />,
       color: "warning",
       services: [
-        "Εμπορικές εγκαταστάσεις",
-        "Συμβόλαια συντήρησης",
-        "Συμμόρφωση κώδικα",
-        "Αναβαθμίσεις συστήματος"
+        t('service.commercial.1'),
+        t('service.commercial.2'),
+        t('service.commercial.3'),
+        t('service.commercial.4')
       ]
     },
     {
-      title: "Υπηρεσίες Έκτακτης Ανάγκης",
-      description: "Υδραυλικές υπηρεσίες έκτακτης ανάγκης 24/7 για επείγουσες καταστάσεις και πρόληψη ζημιών από νερό.",
+      title: t('service.emergency.title'),
+      description: t('service.emergency.desc'),
       icon: <AlertTriangle className="w-12 h-12 text-emergency" />,
       color: "emergency",
       urgent: true,
       services: [
-        "Διαθεσιμότητα 24/7",
-        "Επισκευή σπασμένου σωλήνα",
-        "Πρόληψη πλημμύρας",
-        "Διακοπές έκτακτης ανάγκης"
+        t('service.emergency.1'),
+        t('service.emergency.2'),
+        t('service.emergency.3'),
+        t('service.emergency.4')
       ]
     }
   ];
 
   const benefits = [
-    { icon: <CheckCircle className="w-6 h-6 text-success" />, text: "Πιστοποιημένοι Επαγγελματίες" },
-    { icon: <Star className="w-6 h-6 text-accent" />, text: "Premium Υλικά & Εξοπλισμός" },
-    { icon: <Shield className="w-6 h-6 text-primary" />, text: "Εκτεταμένη Εγγύηση" },
-    { icon: <Clock className="w-6 h-6 text-warning" />, text: "24/7 Διαθεσιμότητα" }
+    { icon: <CheckCircle className="w-6 h-6 text-success" />, text: t('detailed.page.benefits.certified') },
+    { icon: <Star className="w-6 h-6 text-accent" />, text: t('detailed.page.benefits.equipment') },
+    { icon: <Shield className="w-6 h-6 text-primary" />, text: t('detailed.page.benefits.warranty') },
+    { icon: <Clock className="w-6 h-6 text-warning" />, text: t('detailed.page.benefits.availability') }
   ];
 
   return (
@@ -141,19 +143,19 @@ const DetailedServices = () => {
           <div className="space-y-8 animate-fade-in text-white">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-sm font-medium">
               <Zap className="w-5 h-5 text-accent" />
-              Ολοκληρωμένες Υδραυλικές Υπηρεσίες
+              {t('detailed.page.badge')}
             </div>
             
             <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-              <span className="text-accent">Επαγγελματικές</span>
+              <span className="text-accent">{t('detailed.page.title1')}</span>
               <br />
-              <span className="text-white">Υδραυλικές</span>
+              <span className="text-white">{t('detailed.page.title2')}</span>
               <br />
-              <span className="text-white/80 text-4xl lg:text-5xl font-medium">Λύσεις</span>
+              <span className="text-white/80 text-4xl lg:text-5xl font-medium">{t('detailed.page.title3')}</span>
             </h1>
             
             <p className="text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Εξειδικευμένες υπηρεσίες για κάθε υδραυλική ανάγκη με εγγυημένη ποιότητα
+              {t('detailed.page.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
@@ -162,7 +164,7 @@ const DetailedServices = () => {
                 +30 698 581 4213
               </Button>
               <Button variant="outline" size="xl" className="bg-white/20 border-white/30 text-white hover:bg-white/30">
-                Δωρεάν Εκτίμηση
+                {t('services.page.free.estimate')}
               </Button>
             </div>
           </div>
@@ -188,12 +190,12 @@ const DetailedServices = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              <span style={{background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Οι Υπηρεσίες</span>
+              <span style={{background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>{t('detailed.page.section.title1')}</span>
               <br />
-              <span className="text-foreground">μας</span>
+              <span className="text-foreground">{t('detailed.page.section.title2')}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ολοκληρωμένες λύσεις για κάθε υδραυλική ανάγκη
+              {t('detailed.page.section.subtitle')}
             </p>
           </div>
 
@@ -213,7 +215,7 @@ const DetailedServices = () => {
                       </div>
                       {category.urgent && (
                         <Badge variant="destructive" className="animate-pulse">
-                          ΕΠΕΙΓΟΝ
+                          {t('services.urgent')}
                         </Badge>
                       )}
                     </div>
@@ -230,7 +232,7 @@ const DetailedServices = () => {
                   
                   {/* Services List */}
                   <div className="space-y-3">
-                    <h5 className="font-semibold text-foreground">Υπηρεσίες:</h5>
+                    <h5 className="font-semibold text-foreground">{t('detailed.page.services.label')}</h5>
                     <div className="space-y-2">
                       {category.services.map((service, serviceIndex) => (
                         <div key={serviceIndex} className="flex items-center gap-3">
@@ -251,11 +253,11 @@ const DetailedServices = () => {
                       {category.urgent ? (
                         <>
                           <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                          Κλήση Έκτακτης Ανάγκης
+                          {t('detailed.page.emergency.call')}
                         </>
                       ) : (
                         <>
-                          Προσφορά
+                          {t('detailed.page.quote')}
                         </>
                       )}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -276,13 +278,13 @@ const DetailedServices = () => {
             
             <div className="relative space-y-8">
               <h3 className="text-4xl lg:text-5xl font-bold">
-                <span style={{background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Επικοινωνήστε</span>
+                <span style={{background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>{t('detailed.page.cta.title1')}</span>
                 <br />
-                <span className="text-foreground">μαζί μας</span>
+                <span className="text-foreground">{t('detailed.page.cta.title2')}</span>
               </h3>
               
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Εξειδικευμένες λύσεις για κάθε υδραυλική ανάγκη. Δωρεάν συμβουλευτική και προσφορά.
+                {t('detailed.page.cta.subtitle')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -294,7 +296,7 @@ const DetailedServices = () => {
                   <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.087"/>
                   </svg>
-                  WhatsApp
+                  {t('whatsapp')}
                 </Button>
               </div>
             </div>
