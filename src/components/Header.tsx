@@ -1,30 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Globe } from "lucide-react";
+import { Phone, Mail, Globe, Menu } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
   const [language, setLanguage] = useState("GR");
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="glass sticky top-0 z-50 border-b border-border/50">
       {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-1">
+      <div className="bg-gradient-primary text-primary-foreground py-3">
+        <div className="container mx-auto px-6 flex justify-between items-center text-sm">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>+30 698 581 4213</span>
+              <span className="font-medium">+30 698 581 4213</span>
             </div>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>kyriakisplumber@gmail.com</span>
+              <span className="font-medium">kyriakisplumber@gmail.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
             <button 
               onClick={() => setLanguage(language === "GR" ? "EN" : "GR")}
-              className="hover:underline"
+              className="hover:bg-primary-light/20 px-2 py-1 rounded-lg transition-colors font-medium"
             >
               {language}
             </button>
@@ -33,39 +33,31 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">K</span>
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
+              <span className="text-primary-foreground font-bold text-xl">K</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Kyriakis Plumber</h1>
-              <p className="text-sm text-muted-foreground">Premium Services 2025</p>
+              <h1 className="text-2xl font-bold gradient-text">Kyriakis Plumber</h1>
+              <p className="text-sm text-muted-foreground font-medium">Premium Services</p>
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors">
-              Αρχική
-            </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
-              Υπηρεσίες
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              Σχετικά
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Επικοινωνία
-            </a>
+          <div className="hidden md:flex items-center gap-8">
+            {["Αρχική", "Υπηρεσίες", "Σχετικά", "Επικοινωνία"].map((item, index) => (
+              <a key={index} href={`#${item.toLowerCase()}`} className="text-foreground hover:text-primary transition-colors font-medium relative group">
+                {item}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
+              </a>
+            ))}
           </div>
 
-          <div className="flex items-center space-x-2">
-            <Button variant="emergency" size="sm">
-              <Phone className="w-4 h-4" />
-              24/7 Κλήση
-            </Button>
-          </div>
+          <Button variant="emergency" size="sm" className="shadow-md">
+            <Phone className="w-4 h-4" />
+            24/7 Κλήση
+          </Button>
         </div>
       </nav>
     </header>
