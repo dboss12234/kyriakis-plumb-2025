@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Globe, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [language, setLanguage] = useState("GR");
@@ -53,10 +54,17 @@ const Header = () => {
               { name: "Σχετικά", href: "#about" },
               { name: "Επικοινωνία", href: "#contact" }
             ].map((item, index) => (
-              <a key={index} href={item.href} className="text-foreground hover:text-primary transition-colors font-medium relative group">
-                {item.name}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
-              </a>
+              item.href.startsWith('#') ? (
+                <a key={index} href={item.href} className="text-foreground hover:text-primary transition-colors font-medium relative group">
+                  {item.name}
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
+                </a>
+              ) : (
+                <Link key={index} to={item.href} className="text-foreground hover:text-primary transition-colors font-medium relative group">
+                  {item.name}
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
+                </Link>
+              )
             ))}
           </div>
 
