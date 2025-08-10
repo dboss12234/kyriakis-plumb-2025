@@ -252,7 +252,6 @@ const DetailedServices = () => {
                         </>
                       ) : (
                         <>
-                          <Euro className="w-4 h-4" />
                           Προσφορά
                         </>
                       )}
