@@ -78,7 +78,7 @@ const Hero = () => {
                 <img 
                   src={kyriakisLogo} 
                   alt="Kyriakis Plumber Professional Logo"
-                  className="w-full h-auto max-w-md mx-auto"
+                  className="w-full h-auto max-w-xs lg:max-w-sm mx-auto object-contain aspect-square"
                 />
                 
                 {/* Floating Badges */}
