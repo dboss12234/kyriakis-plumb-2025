@@ -1,12 +1,89 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleServiceChange = (value: string) => {
+    setFormData(prev => ({ ...prev, service: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Σφάλμα",
+        description: "Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      await emailjs.send(
+        'service_gdrd50p', // Service ID
+        'template_o8stalu', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          to_email: 'kyriakisplumber@gmail.com'
+        },
+        '0hLkydwQF9f0KtYoT' // Public Key
+      );
+
+      toast({
+        title: "Επιτυχής Αποστολή!",
+        description: "Το μήνυμά σας εστάλη επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Σφάλμα Αποστολής",
+        description: "Παρουσιάστηκε πρόβλημα κατά την αποστολή. Δοκιμάστε ξανά ή επικοινωνήστε τηλεφωνικά.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
@@ -109,52 +186,88 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Πλήρες Όνομα *</Label>
-                    <Input id="name" placeholder="Το όνομά σας" />
+                <form onSubmit={handleSubmit}>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Πλήρες Όνομα *</Label>
+                      <Input 
+                        id="name" 
+                        placeholder="Το όνομά σας" 
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Διεύθυνση Email *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Διεύθυνση Email *</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
-                  </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Αριθμός Τηλεφώνου</Label>
-                    <Input id="phone" placeholder="+30 xxx xxx xxxx" />
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Αριθμός Τηλεφώνου</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="+30 xxx xxx xxxx" 
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="service">Υπηρεσία που Χρειάζεστε</Label>
+                      <Select value={formData.service} onValueChange={handleServiceChange}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Επιλέξτε υπηρεσία" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="emergency">Έκτακτη Επισκευή</SelectItem>
+                          <SelectItem value="installation">Εγκατάσταση Σωληνώσεων</SelectItem>
+                          <SelectItem value="heating">Ενδοδαπέδια Θέρμανση</SelectItem>
+                          <SelectItem value="solar">Ηλιακά Συστήματα</SelectItem>
+                          <SelectItem value="boiler">Εγκατάσταση Λεβήτων</SelectItem>
+                          <SelectItem value="other">Άλλο</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Υπηρεσία που Χρειάζεστε</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Επιλέξτε υπηρεσία" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="emergency">Έκτακτη Επισκευή</SelectItem>
-                        <SelectItem value="installation">Εγκατάσταση Σωληνώσεων</SelectItem>
-                        <SelectItem value="heating">Ενδοδαπέδια Θέρμανση</SelectItem>
-                        <SelectItem value="solar">Ηλιακά Συστήματα</SelectItem>
-                        <SelectItem value="boiler">Εγκατάσταση Λεβήτων</SelectItem>
-                        <SelectItem value="other">Άλλο</SelectItem>
-                      </SelectContent>
-                    </Select>
+
+                  <div className="space-y-2 mb-6">
+                    <Label htmlFor="message">Μήνυμα *</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Περιγράψτε τις υδραυλικές σας ανάγκες..."
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Μήνυμα *</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Περιγράψτε τις υδραυλικές σας ανάγκες..."
-                    rows={4}
-                  />
-                </div>
-
-                <Button variant="cta" className="w-full" size="lg">
-                  Αποστολή Μηνύματος
-                </Button>
+                  <Button 
+                    type="submit" 
+                    variant="cta" 
+                    className="w-full" 
+                    size="lg"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      "Αποστολή..."
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Αποστολή Μηνύματος
+                      </>
+                    )}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
