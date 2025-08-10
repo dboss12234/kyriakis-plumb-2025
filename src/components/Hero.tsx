@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, CheckCircle, Users } from "lucide-react";
-import heroImage from "@/assets/hero-plumber.jpg";
+import kyriakisLogo from "@/assets/kyriakis-logo.png";
 
 const Hero = () => {
   return (
@@ -49,14 +49,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative flex justify-center items-center">
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-white/20">
               <img 
-                src={heroImage} 
-                alt="Professional plumber at work"
-                className="w-full h-[600px] object-cover"
+                src={kyriakisLogo} 
+                alt="Kyriakis Plumber Logo"
+                className="w-80 h-80 object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
             
             {/* Floating badges */}
