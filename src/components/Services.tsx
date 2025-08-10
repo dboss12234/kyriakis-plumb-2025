@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Wrench, Thermometer, AlertTriangle, Sun, Droplets, Flame } from "lucide-react";
 import pipeImage from "/lovable-uploads/033c51f7-a99e-4c09-9028-ab128c60d220.png";
-import heatingImage from "@/assets/underfloor-heating.jpg";
-import solarImage from "@/assets/solar-system.jpg";
-import emergencyImage from "@/assets/emergency-repairs.jpg";
-import waterHeatersImage from "@/assets/water-heaters.jpg";
-import boilerImage from "@/assets/boiler-systems.jpg";
+import heatingImage from "/lovable-uploads/ced9d22a-1cf6-4449-8b22-6e79879a4766.png";
+import solarImage from "/lovable-uploads/a20dfd56-f3df-4935-b1a7-65125a25305f.png";
+import emergencyImage from "/lovable-uploads/74d6462b-2c6b-4a15-9c94-516553cad454.png";
+import waterHeatersImage from "/lovable-uploads/7ef06067-805e-433b-b533-d9984db88caf.png";
+import boilerImage from "/lovable-uploads/37be9720-f499-40ff-8e49-e946d921d108.png";
 
 const Services = () => {
   const services = [
