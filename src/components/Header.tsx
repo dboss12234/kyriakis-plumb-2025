@@ -50,7 +50,19 @@ const Header = () => {
               { name: t('nav.contact'), href: "#contact" }
             ].map((item, index) => (
               item.href.startsWith('#') ? (
-                <a key={index} href={item.href} className="text-foreground hover:text-primary transition-colors font-medium relative group">
+                <a 
+                  key={index} 
+                  href={item.href} 
+                  className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const targetId = item.href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                      targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   {item.name}
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></div>
                 </a>
