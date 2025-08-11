@@ -6,8 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send, Zap } from "lucide-react";
-import emailjs from '@emailjs/browser';
 import { useLanguage } from "@/contexts/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -45,19 +45,19 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        'service_gdrd50p',
-        'template_o8stalu',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
           phone: formData.phone,
           service: formData.service,
-          message: formData.message,
-          to_email: 'kyriakisplumber@gmail.com'
-        },
-        '0hLkydwQF9f0KtYoT'
-      );
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: t('contact.success.title'),
