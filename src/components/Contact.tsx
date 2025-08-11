@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, MessageCircle, Clock, AlertTriangle, Send, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -44,9 +45,20 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      // For now, we'll simulate email sending without exposing credentials
-      // The proper backend solution will be implemented once Supabase secrets are configured
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_gdrd50p',
+        'template_o8stalu',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          to_email: 'kyriakisplumber@gmail.com'
+        },
+        '0hLkydwQF9f0KtYoT'
+      );
       
       toast({
         title: t('contact.success.title'),
