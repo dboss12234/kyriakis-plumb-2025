@@ -158,11 +158,19 @@ const Contact = () => {
             ))}
 
             <div className="flex gap-4 pt-4">
-              <Button variant="hero" className="flex-1 group">
+              <Button 
+                variant="hero" 
+                className="flex-1 group"
+                onClick={() => window.open('tel:+306985814213', '_self')}
+              >
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 {t('contact.call')}
               </Button>
-              <Button variant="outline" className="flex-1 bg-background/50">
+              <Button 
+                variant="outline" 
+                className="flex-1 bg-background/50"
+                onClick={() => window.open('https://wa.me/306985814213', '_blank')}
+              >
                 <MessageCircle className="w-5 h-5" />
                 {t('whatsapp')}
               </Button>
@@ -288,7 +296,12 @@ const Contact = () => {
               {t('contact.emergency.subtitle')}
             </p>
             
-            <Button variant="emergency" size="xl" className="group">
+            <Button 
+              variant="emergency" 
+              size="xl" 
+              className="group"
+              onClick={() => window.open('tel:+306985814213', '_self')}
+            >
               <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
               {t('contact.emergency.button')}
             </Button>

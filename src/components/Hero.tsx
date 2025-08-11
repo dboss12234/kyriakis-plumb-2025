@@ -62,11 +62,24 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="hero" size="lg" className="group bg-accent hover:bg-accent/90 text-white">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group bg-accent hover:bg-accent/90 text-white"
+                onClick={() => window.open('tel:+306985814213', '_self')}
+              >
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 {t('hero.call')}
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/20 border-white/30 text-white hover:bg-white/30"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 {t('hero.estimate')}
               </Button>
             </div>

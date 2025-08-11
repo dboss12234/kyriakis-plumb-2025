@@ -63,7 +63,12 @@ const Header = () => {
             ))}
           </div>
 
-          <Button variant="emergency" size="sm" className="shadow-md">
+          <Button 
+            variant="emergency" 
+            size="sm" 
+            className="shadow-md"
+            onClick={() => window.open('tel:+306985814213', '_self')}
+          >
             <Phone className="w-4 h-4" />
             {t('header.emergency')}
           </Button>
