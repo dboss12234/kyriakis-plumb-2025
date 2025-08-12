@@ -12,50 +12,50 @@ const Hero = () => {
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary/30 rounded-full opacity-20 blur-3xl animate-float"></div>
       <div className="absolute bottom-32 left-16 w-96 h-96 bg-accent/30 rounded-full opacity-15 blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
       
-      <div className="relative container mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+      <div className="relative container mx-auto px-4 md:px-6 py-16 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] md:min-h-[80vh]">
           {/* Left Column - Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-sm font-medium text-white">
-                <Zap className="w-4 h-4 text-accent" />
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
+            <div className="space-y-4 md:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium text-white">
+                <Zap className="w-3 h-3 md:w-4 md:h-4 text-accent" />
                 {t('hero.badge')}
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-accent">{t('hero.title1')}</span>
                 <br />
                 <span className="text-white">{t('hero.title2')}</span>
                 <br />
-                <span className="text-white/80 text-3xl lg:text-4xl font-medium">{t('hero.title3')}</span>
+                <span className="text-white/80 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">{t('hero.title3')}</span>
               </h1>
               
-              <div className="flex items-center gap-3 p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl">
-                <div className="flex items-center justify-center w-12 h-12 bg-emergency/30 rounded-xl">
-                  <Phone className="w-6 h-6 text-emergency animate-pulse" />
+              <div className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl">
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-emergency/30 rounded-xl">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-emergency animate-pulse" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold text-white">{t('hero.emergency')}</h2>
-                  <p className="text-white/80">{t('hero.emergency.desc')}</p>
+                  <h2 className="text-lg md:text-xl font-semibold text-white">{t('hero.emergency')}</h2>
+                  <p className="text-sm md:text-base text-white/80">{t('hero.emergency.desc')}</p>
                 </div>
               </div>
               
-              <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
                 {t('hero.subtitle')}
               </p>
             </div>
 
             {/* Statistics */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-3 md:gap-6">
               {[
                 { number: "500+", label: t('hero.stat1') },
                 { number: "10+", label: t('hero.stat2') },
                 { number: "24/7", label: t('hero.stat3') }
               ].map((stat, index) => (
-                <div key={index} className="text-center p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl animate-scale-in" 
+                <div key={index} className="text-center p-2 md:p-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl md:rounded-2xl animate-scale-in" 
                      style={{animationDelay: `${index * 0.2}s`}}>
-                  <div className="text-2xl font-bold text-accent">{stat.number}</div>
-                  <div className="text-sm text-white/80 font-medium">{stat.label}</div>
+                  <div className="text-lg md:text-2xl font-bold text-accent">{stat.number}</div>
+                  <div className="text-xs md:text-sm text-white/80 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -86,36 +86,36 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Visual Element */}
-          <div className="relative animate-slide-up" style={{animationDelay: '0.3s'}}>
+          <div className="relative animate-slide-up order-first lg:order-last" style={{animationDelay: '0.3s'}}>
             <div className="relative">
               {/* Main Logo Card */}
-              <div className="relative p-8 bg-transparent rounded-3xl">
+              <div className="relative p-4 md:p-8 bg-transparent rounded-3xl">
                 <img 
                   src={kyriakisLogo} 
                   alt="Kyriakis Plumber Professional Logo"
-                  className="w-full h-auto max-w-xs lg:max-w-sm mx-auto object-contain aspect-square drop-shadow-2xl"
+                  className="w-full h-auto max-w-[200px] sm:max-w-xs lg:max-w-sm mx-auto object-contain aspect-square drop-shadow-2xl"
                   style={{filter: 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))'}}
                 />
                 
                 {/* Floating Badges */}
-                <div className="absolute -top-4 -right-4 p-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl animate-float">
-                  <div className="flex items-center gap-2 text-success">
-                    <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm font-semibold">{t('hero.certified')}</span>
+                <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 p-2 md:p-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl md:rounded-2xl animate-float">
+                  <div className="flex items-center gap-1 md:gap-2 text-success">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5" />
+                    <span className="text-xs md:text-sm font-semibold">{t('hero.certified')}</span>
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-4 -left-4 p-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl animate-float" 
+                <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 p-2 md:p-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl md:rounded-2xl animate-float" 
                      style={{animationDelay: '1s'}}>
-                  <div className="flex items-center gap-2 text-accent">
-                    <Star className="w-5 h-5" />
-                    <span className="text-sm font-semibold">{t('hero.quality')}</span>
+                  <div className="flex items-center gap-1 md:gap-2 text-accent">
+                    <Star className="w-4 h-4 md:w-5 md:h-5" />
+                    <span className="text-xs md:text-sm font-semibold">{t('hero.quality')}</span>
                   </div>
                 </div>
 
-                <div className="absolute top-1/2 -right-6 p-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl animate-float" 
+                <div className="absolute top-1/2 -right-3 md:-right-6 p-1.5 md:p-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg md:rounded-xl animate-float" 
                      style={{animationDelay: '2s'}}>
-                  <Users className="w-6 h-6 text-primary" />
+                  <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
               </div>
             </div>
