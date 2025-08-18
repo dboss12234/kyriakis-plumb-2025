@@ -1026,15 +1026,158 @@ const Gallery = () => {
             </div>
           </div>
 
+          {/* Batch 8: Photos 71-80 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+            {/* Photo 71: System pressure monitoring */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a952edbc-975f-4377-877b-916eb61e89a1.png" 
+                alt="System pressure monitoring with precision gauge"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Pressure Monitoring
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 72: Advanced pressure manifold */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/cfdc7fa4-e7bc-43dc-a576-d1150ab241ba.png" 
+                alt="Advanced pressure manifold with blue expansion tank"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Pressure Manifold
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 73: Complex multi-tank system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/106fbc57-0931-4f0b-b266-9a8e445fb58a.png" 
+                alt="Complex multi-tank heating system with advanced controls"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Multi-Tank System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 74: Clean circulation pump installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/2c5f79c8-b55b-4e22-b3ac-93fc34ada671.png" 
+                alt="Clean circulation pump installation with green piping"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Circulation Pump
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 75: Professional control system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/3ce5fc1a-3c45-4452-945b-8e1a47704c5e.png" 
+                alt="Professional control system with multiple gauges and valves"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Control System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 76: Modern heating unit */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a002eb54-27f7-4861-8e89-ccc22438260a.png" 
+                alt="Modern heating unit with advanced monitoring system"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Modern Heating Unit
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 77: Complete manifold installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/31a66894-a0b8-45c5-8278-380b9e235eb2.png" 
+                alt="Complete manifold installation with Sonne tank"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Complete Manifold
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 78: Luxury bathroom renovation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/d48c0ac1-e639-4db4-92cd-07a7c2e75489.png" 
+                alt="Luxury bathroom renovation with modern fixtures and lighting"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Luxury Bathroom
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 79: Professional tank with Grundfos pump */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/68ad0b3c-0444-49ca-8999-bf40afd81d1e.png" 
+                alt="Professional tank installation with Grundfos circulation pump"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Professional Tank
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 80: Modern bathroom fixtures */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/8e714116-7515-4e7f-a113-b913608db4c7.png" 
+                alt="Modern bathroom fixtures with premium brass fittings"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Modern Fixtures
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">🎉 Extended Gallery Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">🚀 Expanded Gallery Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              All 70 photos successfully added to the gallery (7 batches of 10 photos each).
+              All 80 photos successfully added to the gallery (8 batches of 10 photos each).
             </p>
             <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Extended Gallery Fully Loaded ✅</span>
+              <span>Expanded Gallery Fully Loaded ✅</span>
             </div>
           </div>
         </div>
