@@ -79,7 +79,6 @@ const Footer = () => {
             
             {/* Social Media */}
             <div className="space-y-3">
-              <h5 className="font-medium">{t('footer.follow')}</h5>
               <div className="space-y-2">
                 <a 
                   href="https://www.tiktok.com/@kyriakis.plumber?_t=ZN-8yycVmbNvSI&_r=1" 
