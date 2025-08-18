@@ -883,15 +883,158 @@ const Gallery = () => {
             </div>
           </div>
 
+          {/* Batch 7: Photos 61-70 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+            {/* Photo 61: Professional manifold system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/5cb2f250-f6cb-4320-b85e-cdd6e2fb546d.png" 
+                alt="Professional manifold system with multiple control valves"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Manifold System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 62: Boiler room setup */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/c6390ed0-d466-4708-b6e0-8af4bff2292b.png" 
+                alt="Complete boiler room setup with red expansion tank"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Boiler Room Setup
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 63: Advanced heating control panel */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/c4a8fcac-d287-477a-86c1-9be80cb27218.png" 
+                alt="Advanced heating control panel with monitoring systems"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Control Panel
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 64: Multi-zone heating distribution */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/f6b49c54-ab88-457f-a392-5d2da23a4387.png" 
+                alt="Multi-zone heating distribution system with labeled pipes"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Multi-Zone Distribution
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 65: Comprehensive heating installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/b00e54d6-200b-4b74-af36-63956d7f66d8.png" 
+                alt="Comprehensive heating installation with expansion tank and controls"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Comprehensive Installation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 66: Professional tank installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/bf5eeaef-aa1a-4768-9c6e-6f4a0b3351a1.png" 
+                alt="Professional tank installation with advanced piping system"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Tank Installation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 67: Modern water heater unit */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/0034a84e-a758-4123-9a0e-fa25e96ddd38.png" 
+                alt="Modern water heater unit with brass connections"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Water Heater Unit
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 68: Solar thermal fluid containers */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/2afc1f13-5a1b-4d66-b461-cdb236231d90.png" 
+                alt="Solar thermal fluid containers for heating systems"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Solar Thermal Fluid
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 69: Green pipe network system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/67e3a4a2-8c01-42f6-87c0-166b6068e304.png" 
+                alt="Green pipe network system with pressure gauges"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Green Pipe Network
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 70: Pipe material storage */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/2f7fe9d4-77fc-432f-9c56-645b2fc060b5.png" 
+                alt="Professional pipe material storage and organization"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Material Storage
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">🎉 Gallery Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">🎉 Extended Gallery Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              All 60 photos successfully added to the gallery (6 batches of 10 photos each).
+              All 70 photos successfully added to the gallery (7 batches of 10 photos each).
             </p>
             <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Gallery Fully Loaded ✅</span>
+              <span>Extended Gallery Fully Loaded ✅</span>
             </div>
           </div>
         </div>
