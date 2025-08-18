@@ -379,7 +379,148 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
                   Premium Fixtures
+            </div>
+
+            {/* Batch 4: Photos 31-40 */}
+            {/* Photo 31: Complex manifold system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/708150e4-14d6-4dc2-a8ed-177d5736b848.png" 
+                alt="Complex green and blue pipe manifold system with pressure gauges and control valves"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Complex Manifolds
                 </div>
+              </div>
+            </div>
+
+            {/* Photo 32: Basement filtration system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/66c809c0-38c1-43ce-b920-67ec1e6aea71.png" 
+                alt="Professional basement water filtration system with dual filter setup"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Basement Filtration
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 33: Advanced manifold detail */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/cf25d02f-b6ea-4d25-9c6d-a738dbcf3197.png" 
+                alt="Detailed view of advanced pipe manifold system with precision controls"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Advanced Controls
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 34: Industrial pump system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/65b4e035-3a1d-449b-b8ea-7c928c384ce7.png" 
+                alt="Professional green industrial pump motor system installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Industrial Pumps
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 35: AQUASYSTEM expansion tank */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/5e07ecb1-3e0a-4bfc-8e33-e9153b1cd007.png" 
+                alt="AQUASYSTEM red expansion tank with comprehensive pipe manifold system"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Expansion Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 36: Precision measurement work */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/e45651f1-8c0b-4798-ae11-40ff0d24b8d9.png" 
+                alt="Professional water filter installation with precision measurement tools"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Precision Measurement
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 37: GEBERIT display system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/44f149d5-d0a3-4c5f-b0d9-090bd1869de0.png" 
+                alt="GEBERIT actuator plates and concealed cisterns display system"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  GEBERIT Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 38: Professional documentation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/e98ed6cf-441a-425d-bbac-8daa49884c56.png" 
+                alt="Professional faucet installation manual and component documentation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Technical Documentation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 39: Green motor system detail */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/22d6c11b-6785-4ad6-a71f-b9b84cd2e187.png" 
+                alt="Detailed view of professional green motor pump system installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Motor Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 40: Finished premium bathroom */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/982d6411-e511-4990-b93e-7fd985198715.png" 
+                alt="Completed modern bathroom with premium fixtures and elegant design"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Finished Bathroom
+                </div>
+              </div>
+            </div>
               </div>
             </div>
 
@@ -460,13 +601,13 @@ const Gallery = () => {
 
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 3 Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 4 Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              Photos 1-30 successfully added to the gallery.
+              Photos 1-40 successfully added to the gallery.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Ready for Batch 4 (Photos 31-40)</span>
+              <span>Ready for Batch 5 (Photos 41-50)</span>
             </div>
           </div>
         </div>
