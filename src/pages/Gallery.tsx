@@ -268,7 +268,148 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
                   Sewage Systems
+            </div>
+
+            {/* Batch 3: Photos 21-30 */}
+            {/* Photo 21: Precision plumbing work */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/8838a8f2-521d-4d68-86b1-d2a1c8eca577.png" 
+                alt="Detailed precision plumbing installation work with professional tools"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Precision Work
                 </div>
+              </div>
+            </div>
+
+            {/* Photo 22: Underground drainage system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/7ab7d6f8-d93d-49b6-a52d-5ae9eb7ce648.png" 
+                alt="Professional underground drainage and sewerage system installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Drainage Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 23: Water filtration component */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/c34066c8-5fa5-442d-8853-f596c6c0bf23.png" 
+                alt="Professional water filtration system component installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Water Filtration
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 24: Underground utility installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/150720f2-733c-458b-b48c-fb56d444153d.png" 
+                alt="Underground utility box installation with specialized coiled systems"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Utility Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 25: Boiler and heating system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/d60452f6-aaab-4cd9-bf48-830ff9d183ca.png" 
+                alt="Professional boiler installation with expansion tank and control systems"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Boiler Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 26: Professional equipment */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/6c49fab4-771a-4de7-a385-f8ae23a39c56.png" 
+                alt="Professional plumbing equipment and tools for advanced installations"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Professional Equipment
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 27: DAB pump system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/8510e9a1-07f8-4794-9915-7e4e1de19474.png" 
+                alt="DAB water pump system installation with digital controls"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Pump Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 28: Premium bathroom fixtures */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/4f6fa9cc-6c86-4b9d-9282-b8db30f13b92.png" 
+                alt="Premium gold bathroom faucet installation with professional tiling"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Premium Fixtures
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 29: Dual water filtration */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/63c3b92c-105e-4074-9d8b-9cc1e7dbc445.png" 
+                alt="Dual blue water filtration system with professional piping"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Dual Filtration
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 30: Commercial filtration system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/921e530f-fefd-41e5-a7c3-281cf8abc280.png" 
+                alt="Large commercial water filtration system with multiple filter stages"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Commercial Filtration
+                </div>
+              </div>
+            </div>
               </div>
             </div>
 
@@ -319,13 +460,13 @@ const Gallery = () => {
 
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 2 Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 3 Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              Photos 1-20 successfully added to the gallery.
+              Photos 1-30 successfully added to the gallery.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Ready for Batch 3 (Photos 21-30)</span>
+              <span>Ready for Batch 4 (Photos 31-40)</span>
             </div>
           </div>
         </div>
