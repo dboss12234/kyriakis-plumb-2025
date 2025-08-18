@@ -1169,15 +1169,60 @@ const Gallery = () => {
             </div>
           </div>
 
-          {/* Upload Status */}
+          {/* Batch 9: Photos 81-83 (Final Batch) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+            {/* Photo 81: Dual tank heating system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/c2e9ba03-03f0-4d0c-bc57-6fd85771e607.png" 
+                alt="Professional dual tank heating system with advanced piping"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Dual Tank System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 82: Technician at work */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/34f30f71-40e6-40b9-bbac-ab8c3c1d247c.png" 
+                alt="Professional technician working on heating system installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Expert at Work
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 83: Professional installation process */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/63f27746-da14-43d5-bd83-8305efa86753.png" 
+                alt="Professional installation process with heating system components"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Installation Process
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Final Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">🚀 Expanded Gallery Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">🎯 Complete Gallery!</h3>
             <p className="text-muted-foreground mb-4">
-              All 80 photos successfully added to the gallery (8 batches of 10 photos each).
+              All 83 photos successfully added to the gallery (9 batches completed).
             </p>
             <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Expanded Gallery Fully Loaded ✅</span>
+              <span>Complete Portfolio Gallery ✅</span>
             </div>
           </div>
         </div>
