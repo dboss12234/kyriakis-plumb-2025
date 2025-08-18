@@ -33,21 +33,34 @@ const Gallery = () => {
             </p>
           </div>
 
-          {/* Coming Soon Placeholder */}
-          <div className="bg-card rounded-2xl p-12 text-center border border-border/50">
-            <div className="max-w-md mx-auto">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary-foreground text-2xl font-bold">📷</span>
+          {/* Photo Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* Photos will be added here in batches of 10 */}
+            {/* Batch 1: Photos 1-10 will be added here */}
+            {/* Batch 2: Photos 11-20 will be added here */}
+            {/* Continue for all 101 photos... */}
+            
+            {/* Placeholder for first batch */}
+            <div className="bg-card rounded-lg border border-border/50 aspect-square flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-muted-foreground">📷</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Batch 1</p>
+                <p className="text-xs text-muted-foreground">Photos 1-10</p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{t('gallery.comingSoon')}</h3>
-              <p className="text-muted-foreground mb-6">
-                {t('gallery.comingSoonDescription')}
-              </p>
-              <div className="bg-muted/50 rounded-lg p-6">
-                <p className="text-sm text-muted-foreground">
-                  {t('gallery.uploadingSoon')}
-                </p>
-              </div>
+            </div>
+          </div>
+
+          {/* Upload Instructions */}
+          <div className="mt-12 bg-muted/30 rounded-xl p-8 text-center">
+            <h3 className="text-xl font-semibold mb-4">📸 Ready for Your Photos</h3>
+            <p className="text-muted-foreground mb-4">
+              Upload your work photos in batches of 10. I'll add them to the gallery without duplicates.
+            </p>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
+              <span className="font-medium">Status:</span>
+              <span>Ready for Batch 1 (Photos 1-10)</span>
             </div>
           </div>
         </div>
