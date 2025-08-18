@@ -157,7 +157,148 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
                   Utility Installation
+            </div>
+
+            {/* Batch 2: Photos 11-20 */}
+            {/* Photo 11: Underfloor heating installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/ec0d5397-5e21-4be9-9ec5-d708c7fcd306.png" 
+                alt="Underfloor heating pipes installation on insulation panels"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Underfloor Heating
                 </div>
+              </div>
+            </div>
+
+            {/* Photo 12: Outdoor pipe installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/0362e908-213a-4c18-b601-279e0028946e.png" 
+                alt="Professional outdoor copper pipe installation along stone wall"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Outdoor Installation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 13: Stone wall pipe routing */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/372d6bd5-4686-430a-8b9d-bf7c6505a79f.png" 
+                alt="Copper pipe installation along traditional stone wall foundation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Foundation Work
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 14: Underground excavation work */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a4fbf0f6-a382-4043-8771-c5aec5614169.png" 
+                alt="Professional excavation work for underground pipe installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Excavation Work
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 15: Main water line installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/5a165467-ab5f-43c1-b8b1-7fa596227ade.png" 
+                alt="Large diameter water main pipe installation in excavated area"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Main Water Lines
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 16: Construction site plumbing */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/f63ff9b8-8d3b-4e7f-8437-cd9e706725fe.png" 
+                alt="Plumbing installation at construction site with workers"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Construction Site
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 17: Modern water heater installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/9f280a5e-4eb5-402b-9aa5-40ac3b3a1936.png" 
+                alt="Modern tankless water heater installation with professional piping"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Water Heater
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 18: Sewage system component */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/3f004088-73bb-43eb-a24c-a5331e717e10.png" 
+                alt="Professional sewage system tank component installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Sewage Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 19: Outdoor excavation and piping */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/af3a8fdb-1c03-4fbe-ad56-2b24fa935ad8.png" 
+                alt="Outdoor excavation work with specialized plumbing equipment"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Site Preparation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 20: Hydraulic separation unit */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/4d1978e9-201b-4228-aa81-f3fe6be7070a.png" 
+                alt="Professional hydraulic separation unit installation with multiple connections"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Hydraulic Systems
+                </div>
+              </div>
+            </div>
               </div>
             </div>
 
@@ -178,13 +319,13 @@ const Gallery = () => {
 
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 1 Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 2 Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              First 10 photos successfully added to the gallery.
+              Photos 1-20 successfully added to the gallery.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Ready for Batch 2 (Photos 11-20)</span>
+              <span>Ready for Batch 3 (Photos 21-30)</span>
             </div>
           </div>
         </div>
