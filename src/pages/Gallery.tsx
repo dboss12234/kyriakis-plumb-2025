@@ -491,7 +491,148 @@ const Gallery = () => {
                 <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
                   Technical Documentation
                 </div>
+            </div>
+
+            {/* Batch 5: Photos 41-50 */}
+            {/* Photo 41: Well drilling equipment */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a9288aeb-ee6d-4cca-86f5-c8f4155b7db2.png" 
+                alt="Professional well drilling and water system installation equipment"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Well Drilling
+                </div>
               </div>
+            </div>
+
+            {/* Photo 42: Rooftop water tank */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/48d8265c-1ac6-4377-9c09-c166e5d1f5b0.png" 
+                alt="Professional rooftop water tank installation with city skyline view"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Rooftop Tank
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 43: Industrial mechanical room */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/1b846268-f669-45be-853f-b3e1c11c9576.png" 
+                alt="Large industrial mechanical room with blue storage tanks and professional installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Industrial Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 44: Filter sediment inspection */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/f8763d23-aaf1-434a-9677-69f6ce6b01b6.png" 
+                alt="Professional water filter sediment inspection and maintenance work"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Filter Maintenance
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 45: Vaillant solar water heaters */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/55393575-9b54-48a0-99b3-0332cab716f5.png" 
+                alt="Professional Vaillant solar water heater installation on residential rooftop"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Solar Water Heaters
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 46: DAB pump installation room */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a8f4bb7f-18b9-46a1-9f3c-150e73b5c739.png" 
+                alt="Professional DAB pump system installation in basement mechanical room"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  DAB Pump Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 47: Flow measurement device */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/c8e09356-24cf-4e0c-8b34-69fcd3a9529d.png" 
+                alt="Professional water flow measurement device installation in utility area"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Flow Measurement
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 48: Solar installation wide view */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/332bcd48-36ef-4b6f-9a9f-fc46352bf927.png" 
+                alt="Wide view of professional Vaillant solar water heater installation on rooftop"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Solar Installation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 49: Complete solar system setup */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/a49f318e-1152-46d4-ba06-4e9a9b2f6321.png" 
+                alt="Complete professional solar water heating system installation with piping connections"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Complete Solar System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 50: Underground infrastructure work */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/3e223dda-f293-44a1-95e6-f2f7b84e4584.png" 
+                alt="Professional underground pipe infrastructure installation with orange and gray pipes"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Underground Infrastructure
+                </div>
+              </div>
+            </div>
             </div>
 
             {/* Photo 39: Green motor system detail */}
@@ -601,13 +742,13 @@ const Gallery = () => {
 
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 4 Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 5 Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              Photos 1-40 successfully added to the gallery.
+              Photos 1-50 successfully added to the gallery.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Ready for Batch 5 (Photos 41-50)</span>
+              <span>Ready for Batch 6 (Photos 51-60)</span>
             </div>
           </div>
         </div>
