@@ -19,6 +19,7 @@ const translations: Translations = {
   'nav.services': 'Υπηρεσίες',
   'nav.details': 'Λεπτομέρειες',
   'nav.about': 'Σχετικά',
+  'nav.gallery': 'Γκαλερί',
   'nav.contact': 'Επικοινωνία',
   'header.emergency': '24/7 Κλήση',
   'header.tagline': 'Premium Services',
@@ -257,6 +258,15 @@ const translations: Translations = {
   'service.emergency.2': 'Επισκευή σπασμένου σωλήνα',
   'service.emergency.3': 'Πρόληψη πλημμύρας',
   'service.emergency.4': 'Διακοπές έκτακτης ανάγκης',
+
+  // Gallery Page
+  'gallery.title': 'Γκαλερί Εργασιών',
+  'gallery.subtitle': 'Δείτε τις επαγγελματικές υδραυλικές εργασίες που έχουμε ολοκληρώσει',
+  'gallery.workTitle': 'Οι Εργασίες μας',
+  'gallery.workDescription': 'Ρίξτε μια ματιά στα έργα που έχουμε υλοποιήσει με επιτυχία',
+  'gallery.comingSoon': 'Σύντομα Διαθέσιμο',
+  'gallery.comingSoonDescription': 'Προετοιμάζουμε μια εκτενή συλλογή από τις καλύτερες εργασίες μας.',
+  'gallery.uploadingSoon': 'Θα ανεβάσουμε σύντομα 101 φωτογραφίες από τα έργα μας!',
 
   // Not Found Page
   'notfound.title': '404',
