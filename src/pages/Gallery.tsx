@@ -740,15 +740,158 @@ const Gallery = () => {
             </div>
           </div>
 
+          {/* Batch 6: Photos 51-60 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+            {/* Photo 51: Underground pipe connections */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/b970f27a-345a-4491-995a-2955c41cb560.png" 
+                alt="Underground pipe connections with orange and gray fittings"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Pipe Connections
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 52: Green pipe installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/be0f94e1-af38-4342-ac2c-2f5ead7e1b8c.png" 
+                alt="Green pipe installation with concrete blocks"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Green Pipe Installation
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 53: Professional pipe fitting */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/fc6992e4-71b8-413f-8fad-a4484276cd27.png" 
+                alt="Professional pipe fitting with orange and gray connections"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Professional Fitting
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 54: Complex pipe junction */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/e4f4849d-1466-4e8d-9d00-81dad6531561.png" 
+                alt="Complex pipe junction with multiple connections"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Complex Junction
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 55: Modern heating system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/f1a068eb-be1a-4db8-a08a-b8dc9ea8bfee.png" 
+                alt="Modern heating system with dual units mounted on wall"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Modern Heating System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 56: Underground pipe layout */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/edb8969b-b219-48a7-b1e6-3dfde32dce0d.png" 
+                alt="Underground pipe layout with green and orange pipes"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Underground Layout
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 57: Pipe installation process */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/ebf03157-c944-4c62-9b5b-0bb6afbcfdaf.png" 
+                alt="Pipe installation process in underground trench"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Installation Process
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 58: Advanced heating control system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/068e9250-f600-49b5-9694-1313532d7a0d.png" 
+                alt="Advanced heating control system with multiple units"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Advanced Controls
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 59: Professional wall-mounted system */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/2cdc461c-9974-4ad6-a943-8bfb56abffd1.png" 
+                alt="Professional wall-mounted heating system installation"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Wall-Mounted System
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 60: Complete heating installation */}
+            <div className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square">
+              <img 
+                src="/lovable-uploads/f3295e4f-4a32-4661-9938-b064d12596df.png" 
+                alt="Complete heating installation with dual control units"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 text-white text-sm font-medium">
+                  Complete Installation
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Upload Status */}
           <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
-            <h3 className="text-xl font-semibold mb-4 text-primary">✅ Batch 5 Complete!</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">🎉 Gallery Complete!</h3>
             <p className="text-muted-foreground mb-4">
-              Photos 1-50 successfully added to the gallery.
+              All 60 photos successfully added to the gallery (6 batches of 10 photos each).
             </p>
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-lg">
               <span className="font-medium">Status:</span>
-              <span>Ready for Batch 6 (Photos 51-60)</span>
+              <span>Gallery Fully Loaded ✅</span>
             </div>
           </div>
         </div>
