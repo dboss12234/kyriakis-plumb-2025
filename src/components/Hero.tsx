@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Users, Star, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import kyriakisLogo from "@/assets/kyriakis-logo.png";
+const kyriakisLogo = "/lovable-uploads/89b82f1c-05ca-4084-9f0b-926ecdddad83.png";
 
 const Hero = () => {
   const { t } = useLanguage();
