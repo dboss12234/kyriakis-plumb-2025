@@ -97,7 +97,14 @@ const Gallery = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               Δείτε τα καλύτερα έργα υδραυλικών και θέρμανσης που έχουμε ολοκληρώσει
             </p>
-...
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Επαγγελματικές Εργασίες</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
               Εξερευνήστε την εκτενή συλλογή των υψηλής ποιότητας εργασιών μας στα υδραυλικά και τη θέρμανση
@@ -106,7 +113,37 @@ const Gallery = () => {
               <ZoomIn size={16} />
               <span className="text-sm font-medium">Κάντε κλικ σε οποιαδήποτε εικόνα για πλήρη προβολή</span>
             </div>
-...
+          </div>
+
+          {/* Optimized Gallery Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            {galleryImages.map((image, index) => (
+              <div 
+                key={index}
+                className="group relative overflow-hidden rounded-lg border border-border/50 aspect-square cursor-pointer hover:scale-105 transition-all duration-300 hover:shadow-xl hover:border-primary/50"
+                onClick={() => openLightbox(image.src, image.alt, index)}
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <p className="text-white text-xs font-medium truncate">{image.alt}</p>
+                    <div className="flex items-center gap-1 mt-1">
+                      <ZoomIn size={12} className="text-white/80" />
+                      <span className="text-white/80 text-xs">Κλικ για μεγέθυνση</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Gallery Stats */}
+          <div className="mt-12 bg-gradient-primary/10 rounded-xl p-8 text-center border border-primary/20">
             <h3 className="text-xl font-semibold mb-4 text-primary">🎯 Πλήρες Επαγγελματικό Χαρτοφυλάκιο</h3>
             <p className="text-muted-foreground mb-4">
               Παρουσιάζουμε {galleryImages.length} υψηλής ποιότητας φωτογραφίες από την εμπειρία μας σε υδραυλικά και θέρμανση.
