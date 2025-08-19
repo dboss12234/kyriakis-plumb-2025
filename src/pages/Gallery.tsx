@@ -9,7 +9,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; index: number } | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Array of all gallery images
+  // Array of all gallery images (duplicates removed)
   const galleryImages = [
     { src: "/lovable-uploads/789a57f6-9680-4be6-b5dc-71a2f45dd1a7.png", alt: "Underground pipe installation with copper pipes" },
     { src: "/lovable-uploads/81dc06e3-54b8-4a8b-9eec-5481c0738201.png", alt: "Professional pipe fitting and connections" },
@@ -37,7 +37,6 @@ const Gallery = () => {
     { src: "/lovable-uploads/e4f4849d-1466-4e8d-9d00-81dad6531561.png", alt: "Complex pipe junction with multiple connections" },
     { src: "/lovable-uploads/f1a068eb-be1a-4db8-a08a-b8dc9ea8bfee.png", alt: "Modern heating system with dual units mounted on wall" },
     { src: "/lovable-uploads/5cb2f250-f6cb-4320-b85e-cdd6e2fb546d.png", alt: "Professional manifold system with multiple control valves" },
-    { src: "/lovable-uploads/c6390ed0-d466-4708-b6e0-8af4bff2292b.png", alt: "Complete boiler room setup with red expansion tank" },
     { src: "/lovable-uploads/c4a8fcac-d287-477a-86c1-9be80cb27218.png", alt: "Advanced heating control panel with monitoring systems" },
     { src: "/lovable-uploads/f6b49c54-ab88-457f-a392-5d2da23a4387.png", alt: "Multi-zone heating distribution system with labeled pipes" },
     { src: "/lovable-uploads/b00e54d6-200b-4b74-af36-63956d7f66d8.png", alt: "Comprehensive heating installation with expansion tank and controls" },
