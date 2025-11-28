@@ -50,6 +50,7 @@ const Header = () => {
             {[
               { name: t('nav.home'), href: "/" },
               { name: t('nav.services'), href: "/services" },
+              { name: t('nav.pricing'), href: "/pricing" },
               { name: t('nav.about'), href: "/about" },
               { name: t('nav.details'), href: "/detailed-services" },
               { name: t('nav.gallery'), href: "/gallery" },
@@ -113,6 +114,7 @@ const Header = () => {
               {[
                 { name: t('nav.home'), href: "/" },
                 { name: t('nav.services'), href: "/services" },
+                { name: t('nav.pricing'), href: "/pricing" },
                 { name: t('nav.about'), href: "/about" },
                 { name: t('nav.details'), href: "/detailed-services" },
                 { name: t('nav.gallery'), href: "/gallery" },
